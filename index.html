@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="label">
+        <span>lindan maulana</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="../latihan API/about.html">About</a></li>
+          <li><a href="../latihan API/quotes.html">Quotes</a></li>
+        </ul>
+      </nav>
+
+      <!-- hamburger menu start -->
+      <div class="hamburger-menu">
+        <button id="btn-hamburger-menu">
+          <span class="hamburger-1"></span>
+          <span class="hamburger-2"></span>
+          <span class="hamburger-3"></span>
+        </button>
+      </div>
+      <!-- hamburger menu end -->
+
+      <div class="navbar-phone">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="../latihan API/about.html">About</a></li>
+          <li><a href="../latihan API/quotes.html">Quotes</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section id="container">
+        <div id="container-1">
+          <div class="wrapper-1">
+            <label for="userInput">surat al quran</label>
+            <input
+              type="text"
+              name="input"
+              id="userInput"
+              placeholder="masukan nomor surat"
+            />
+            <button onclick="cariData()">search</button>
+          </div>
+        </div>
+        <div id="container-2">
+          <div class="output-1"></div>
+
+          <div class="output-2">
+            <audio controls id="audio-mp3">
+              <source type="audio/mp3" />
+            </audio>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- script js  -->
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
