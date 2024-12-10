@@ -23,6 +23,9 @@ export default {
         "color-mongodb": "#47A248",
         "color-express": "#000000",
       },
+      scrollbarWidth: {
+        none: "none",
+      },
     },
   },
   plugins: [],

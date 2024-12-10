@@ -16,7 +16,7 @@ const ProfesionalGoals = () => {
       <h4 className="mb-2 text-xl tracking-widest font-montserrat-bold">
         Professional Goals
       </h4>
-      <div className="p-4 text-sm text-white rounded bg-dev-black">
+      <div className="p-4 text-sm border rounded border-dev-black/20 text-dev-black ">
         {showTypeWriter && (
           <Typewriter
             words={[
@@ -30,6 +30,7 @@ const ProfesionalGoals = () => {
             
           />
         )}
+        
       </div>
     </div>
   );

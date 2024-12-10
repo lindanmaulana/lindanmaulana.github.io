@@ -7,13 +7,12 @@
     @apply font-montserrat-medium;
   }
 
-  
   @font-face {
     font-family: "Montserrat-Light";
     src: url("./assets/fonts/montserrat/Montserrat-Light.woff2 ")
-    format("woff2"),
-    url("./assets/fonts/montserrat/Montserrat-Light.woff") format("woff"),
-    url("./assets/fonts/montserrat/Montserrat-Light.ttf") format("truetype");
+        format("woff2"),
+      url("./assets/fonts/montserrat/Montserrat-Light.woff") format("woff"),
+      url("./assets/fonts/montserrat/Montserrat-Light.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -22,14 +21,13 @@
   @font-face {
     font-family: "Montserrat-Regular";
     src: url("./assets/fonts/montserrat/Montserrat-Regular.woff2 ")
-    format("woff2"),
-    url("./assets/fonts/montserrat/Montserrat-Regular.woff") format("woff"),
-    url("./assets/fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
+        format("woff2"),
+      url("./assets/fonts/montserrat/Montserrat-Regular.woff") format("woff"),
+      url("./assets/fonts/montserrat/Montserrat-Regular.ttf") format("truetype");
     font-weight: 500;
     font-style: normal;
     font-display: swap;
   }
-
 
   @font-face {
     font-family: "Montserrat-Medium";
@@ -44,8 +42,7 @@
 
   @font-face {
     font-family: "Montserrat-Bold";
-    src: url("./assets/fonts/montserrat/Montserrat-Bold.woff2 ")
-        format("woff2"),
+    src: url("./assets/fonts/montserrat/Montserrat-Bold.woff2 ") format("woff2"),
       url("./assets/fonts/montserrat/Montserrat-Bold.woff") format("woff"),
       url("./assets/fonts/montserrat/Montserrat-Bold.ttf") format("truetype");
     font-weight: 500;
@@ -54,13 +51,21 @@
   }
 }
 
-
 @layer components {
   .transition-global {
-    @apply transition-all duration-700 ease-in-out
+    @apply transition-all duration-700 ease-in-out;
   }
 
   .text-gradient-darkblue-blue {
-    @apply bg-gradient-to-r from-dev-blue to-dev-blue-dark bg-clip-text text-transparent
+    @apply bg-gradient-to-r from-dev-blue to-dev-blue-dark bg-clip-text text-transparent;
+  }
+
+  .no-scrollbar {
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
   }
 }

@@ -9,3 +9,13 @@ export const ImageHome = {
   homeIcon2,
   meTtd,
 };
+
+import gifUser from "./user.gif"
+export const ImageGif = {
+  gifUser
+}
+
+import bgNav from "./backdrop.webp"
+export const BackgroundImage = {
+  bgNav
+}

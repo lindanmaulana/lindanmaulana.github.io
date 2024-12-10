@@ -1,23 +1,24 @@
+import { PiStudent } from "react-icons/pi";
+import TitleAbout from "../../title/TitleAbout";
+
 const Education = () => {
   return (
-    <div>
-      <h4 className="mb-2 text-xl tracking-widest font-montserrat-bold">
-        Education
-      </h4>
+    <div className="flex flex-col gap-4">
+      <TitleAbout icons={<PiStudent />} title="Education" subtitle="Educational Background" />
       <ul className="flex items-center gap-4">
-        <li className="flex flex-col gap-1 p-4 text-white rounded bg-dev-black">
+        <li className="flex flex-col gap-1 p-4 border rounded-lg border-dev-black/20 ">
           <h5 className="text-xs font-montserrat-light">2023 - present</h5>
-          <h5 className="text-xs">
+          <h5 className="text-xs font-bold">
             UNIVERSITAS KUNINGAN -{" "}
-            <span className="font-montserrat-light">Teknik Informatika</span>
+            <span className="font-thin">Teknik Informatika</span>
           </h5>
           <h5 className="text-xs">Kuningan</h5>
         </li>
-        <li className="flex flex-col gap-1 p-4 text-white rounded shadow-2xl bg-dev-black">
+        <li className="flex flex-col gap-1 p-4 border rounded-lg border-dev-black/20 ">
           <h5 className="text-xs font-montserrat-light">2019 - 2023</h5>
-          <h5 className="text-xs">
+          <h5 className="text-xs font-bold">
             SMKN 3 KUNINGAN -{" "}
-            <span className="font-montserrat-light">
+            <span className="font-thin">
               Teknik Otomasi Industri
             </span>
           </h5>

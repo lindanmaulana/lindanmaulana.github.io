@@ -1,11 +1,18 @@
 import { HiOutlineMail } from "react-icons/hi";
 import { LiaPhoneSolid } from "react-icons/lia";
-import { ImageHome } from "../../../assets/images";
+import { ImageGif, ImageHome } from "../../../assets/images";
 import { Typewriter } from "react-simple-typewriter";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="h-full">
+    <section className="relative h-full">
+      <div className="absolute flex items-center cursor-pointer group top-4 right-4">
+          <h4 className="text-xs opacity-0 group-hover:opacity-100 transition-global">Hi, Im Frontend Developer</h4>
+        <figure className="w-16 ">
+          <img src={ImageGif.gifUser} alt="User" className="w-full h-full" />
+        </figure>
+      </div>
       <div className="flex items-center h-full gap-10 ml-auto justify-evenly ">
         <div className="flex flex-col justify-center h-full gap-2 ">
           <h2 className="relative text-5xl max-w-80 font-montserrat-regular">
@@ -20,7 +27,11 @@ const Hero = () => {
           <div className="flex items-center gap-px mb-2">
             <h5 className="text-base">
               <Typewriter
-                words={["Kuningan University Students", "Frontend Developer", "Javascript Developer"]}
+                words={[
+                  "Kuningan University Students",
+                  "Frontend Developer",
+                  "Javascript Developer",
+                ]}
                 loop={true}
                 cursor
                 cursorStyle="_"
@@ -30,17 +41,17 @@ const Hero = () => {
               />
             </h5>
           </div>
-          <a
-            href=""
-            className="flex items-center justify-center py-2 mb-5 text-xs text-white bg-dev-black max-w-36"
+          <Link
+            to="/aboutme"
+            className="flex items-center justify-center py-2 mb-5 text-xs text-white duration-700 bg-dev-black/70 hover:bg-dev-black transition-global max-w-36"
           >
             Let's talk with me
-          </a>
+          </Link>
           <div className="flex items-center gap-4">
-            <h4 className="flex items-center gap-1 text-sm font-montserrat-bold">
+            <h4 className="flex items-center gap-1 text-sm font-montserrat-medium">
               <LiaPhoneSolid /> +628 532 270 1120
             </h4>
-            <h4 className="flex items-center gap-1 text-sm font-montserrat-bold">
+            <h4 className="flex items-center gap-1 text-sm font-montserrat-medium">
               <HiOutlineMail /> linmidofficial@gmail.com
             </h4>
           </div>

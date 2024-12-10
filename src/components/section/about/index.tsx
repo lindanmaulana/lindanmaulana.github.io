@@ -1,22 +1,22 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Typewriter } from "react-simple-typewriter";
 import { ImageHome } from "../../../assets/images";
 import { handleGoals } from "../../../redux/slices/about";
-import { AppDispatch } from "../../../redux/store";
+import { AppDispatch, RootState } from "../../../redux/store";
 import About from "./about";
 import Education from "./education";
 import ProfesionalGoals from "./profesionalGoals";
 import Skills from "./skills";
-import Study from "./study";
 
 const AboutMe = () => {
+  const {goals} = useSelector((state: RootState) => state.about)
   const dispatch = useDispatch<AppDispatch>();
   const handleReadMore = () => {
     dispatch(handleGoals());
   };
   return (
     <section className="h-full p-10">
-      <div className="pb-4">
+      <div>
         <Typewriter
           words={["Nice to meet you!", "Welcome to My Bio"]}
           loop={true}
@@ -51,9 +51,9 @@ const AboutMe = () => {
             </div>
             <button
               onClick={handleReadMore}
-              className="px-4 py-2 text-xs text-white rounded bg-dev-blue-dark hover:bg-gradient-to-r from-dev-blue to-dev-blue-dark"
+              className={`px-4 py-2 text-xs text-white rounded   ${goals ? "bg-[#B22222]" : "bg-dev-blue-dark hover:bg-gradient-to-r from-dev-blue to-dev-blue-dark"} `}
             >
-              Read more
+              {goals ? "Closed" : "Read more"}
             </button>
           </div>
           <div className="flex flex-col gap-5">
@@ -64,7 +64,7 @@ const AboutMe = () => {
         </div>
       </div>
       <ProfesionalGoals />
-      <Study />
+      {/* <Study /> */}
     </section>
   );
 };

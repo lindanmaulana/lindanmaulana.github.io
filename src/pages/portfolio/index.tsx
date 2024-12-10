@@ -1,9 +1,10 @@
 import Pages from ".."
+import Portfolio from "../../components/section/portfolio"
 
 const PagePortfolio = () => {
     return (
         <Pages>
-            <h1>hello</h1>
+            <Portfolio />
         </Pages>
     )
 }

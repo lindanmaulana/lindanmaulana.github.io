@@ -5,7 +5,7 @@ interface stateNavbar {
 }
 
 const initialState: stateNavbar = {
-    sidebar: true
+    sidebar: false
 }
 
 const FeaturesNavbar = createSlice({
@@ -13,9 +13,13 @@ const FeaturesNavbar = createSlice({
     initialState,
     reducers: {
         handleSidebar: (state) => {
-            state.sidebar = !state.sidebar
+            state.sidebar = true
+        },
+
+        handleOutSideBar: (state) => {
+            state.sidebar = false
         }
     }
 })
-export const {handleSidebar} = FeaturesNavbar.actions
+export const {handleSidebar, handleOutSideBar} = FeaturesNavbar.actions
 export default FeaturesNavbar.reducer
