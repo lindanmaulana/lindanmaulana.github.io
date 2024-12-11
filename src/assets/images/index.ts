@@ -11,8 +11,15 @@ export const ImageHome = {
 };
 
 import gifUser from "./user.gif"
+import gifWebDevelopment from "./web-development.webp"
+import gifSlicingUi from "./slicing-ui.gif"
+import gifBackendDevelopment from "./backend-development.gif"
+
 export const ImageGif = {
-  gifUser
+  gifUser,
+  gifWebDevelopment,
+  gifSlicingUi,
+  gifBackendDevelopment
 }
 
 import bgNav from "./backdrop.webp"

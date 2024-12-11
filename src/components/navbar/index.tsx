@@ -20,8 +20,8 @@ const Navbar = () => {
     <div
       onMouseEnter={handleBar}
       onMouseLeave={handleOutBar}
-      className={`flex flex-col bg-dev-black h-screen shadow-[1px_1px_1px_1px_black] justify-between text-white left-0 top-0  ${
-        sidebar ? "w-[260px]" : "w-[80px]"
+      className={`flex flex-col bg-dev-black h-screen z-50 fixed justify-between text-white left-0 top-0  ${
+        sidebar ? "w-[260px]" : "w-[78px]"
       } py-6 px-2 transition-global`}
     >
       <div
@@ -45,7 +45,7 @@ const Navbar = () => {
 
         <div
           className={`absolute flex gap-2 flex-col w-full justify-center items-center overflow-hidden translate-x-1/2 ${
-            sidebar ? " -bottom-24" : " top-5 mr-1"
+            sidebar ? " -bottom-24" : " top-5"
           } right-1/2`}
         >
           <figure

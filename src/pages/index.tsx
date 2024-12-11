@@ -1,15 +1,15 @@
-import { ReactNode } from "react"
-import Navbar from "../components/navbar"
+import { Outlet } from "react-router-dom";
+import Navbar from "../components/navbar";
 
-const Pages = (props: {children: ReactNode}) => {
-    return (
-        <div className="flex w-full h-screen">
-            <Navbar />
-            <div className="flex-1 overflow-y-auto no-scrollbar">
-                {props.children}
-            </div>
-        </div>
-    )
-}
+const Pages = () => {
+  return (
+    <div className="pl-20">
+      <Navbar />
+      <main>
+        <Outlet />
+      </main>
+    </div>
+  );
+};
 
-export default Pages
+export default Pages;

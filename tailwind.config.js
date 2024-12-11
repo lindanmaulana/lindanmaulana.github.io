@@ -2,15 +2,21 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    container: {
+      center: true
+    },
     extend: {
       fontFamily: {
         "montserrat-light": ["Montserrat-Light"],
         "montserrat-medium": ["Montserrat-Medium"],
         "montserrat-bold": ["Montserrat-Bold"],
         "montserrat-regular": ["Montserrat-Regular"],
+        "Geist": ["Geist"]
       },
       colors: {
         "dev-black": "#141313",
+        "dev-black-gray": "#404040",
+        "dev-gray": "#525252",
         "dev-blue-dark": "#110843",
         "dev-blue": "#2447F9",
         "dev-gray": "#E5E9F2",

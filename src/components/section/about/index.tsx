@@ -9,62 +9,68 @@ import ProfesionalGoals from "./profesionalGoals";
 import Skills from "./skills";
 
 const AboutMe = () => {
-  const {goals} = useSelector((state: RootState) => state.about)
+  const { goals } = useSelector((state: RootState) => state.about);
   const dispatch = useDispatch<AppDispatch>();
   const handleReadMore = () => {
     dispatch(handleGoals());
   };
   return (
-    <section className="h-full p-10">
-      <div>
-        <Typewriter
-          words={["Nice to meet you!", "Welcome to My Bio"]}
-          loop={true}
-          cursor
-          cursorStyle="_"
-          typeSpeed={100}
-          deleteSpeed={60}
-          delaySpeed={1000}
-        />
-      </div>
-      <div className="flex flex-col justify-center h-full gap-10">
-        <div className="flex gap-10">
-          <div className="flex flex-col items-center justify-center">
-            <div className="relative w-80 ">
-              <img
-                src={ImageHome.me}
-                alt="Lindan Maulana"
-                className="w-full h-full rounded-full"
-              />
-              <img
-                src={ImageHome.meTtd}
-                alt="Me TTD"
-                className="absolute bottom-0 w-56 -right-10"
-              />
+    <section className="p-10 ">
+      <div className="container max-w-4xl">
+        <div>
+          <Typewriter
+            words={["Nice to meet you!", "Welcome to My Bio"]}
+            loop={true}
+            cursor
+            cursorStyle="_"
+            typeSpeed={100}
+            deleteSpeed={60}
+            delaySpeed={1000}
+          />
+        </div>
+        <div className="flex flex-col justify-center h-full gap-10">
+          <div className="flex gap-10">
+            <div className="flex flex-col items-center justify-center">
+              <div className="relative w-80 ">
+                <img
+                  src={ImageHome.me}
+                  alt="Lindan Maulana"
+                  className="w-full h-full rounded-full"
+                />
+                <img
+                  src={ImageHome.meTtd}
+                  alt="Me TTD"
+                  className="absolute bottom-0 w-56 -right-10"
+                />
+              </div>
+              <h3 className="text-3xl text-transparent font-montserrat-bold bg-gradient-to-r from-dev-blue to-dev-blue-dark bg-clip-text">
+                Lindan Maulana
+              </h3>
+              <div className="flex items-center gap-px mb-2">
+                <h5 className="text-sm">Student,</h5>
+                <h5 className="text-sm">Frontend Developer</h5>
+              </div>
+              <button
+                onClick={handleReadMore}
+                className={`px-4 py-2 text-xs text-white rounded   ${
+                  goals
+                    ? "bg-[#B22222]"
+                    : "bg-dev-blue-dark hover:bg-gradient-to-r from-dev-blue to-dev-blue-dark"
+                } `}
+              >
+                {goals ? "Closed" : "Read more"}
+              </button>
             </div>
-            <h3 className="text-3xl text-transparent font-montserrat-bold bg-gradient-to-r from-dev-blue to-dev-blue-dark bg-clip-text">
-              Lindan Maulana
-            </h3>
-            <div className="flex items-center gap-px mb-2">
-              <h5 className="text-sm">Student,</h5>
-              <h5 className="text-sm">Frontend Developer</h5>
+            <div className="flex flex-col gap-5">
+              <About />
+              <Education />
+              <Skills />
             </div>
-            <button
-              onClick={handleReadMore}
-              className={`px-4 py-2 text-xs text-white rounded   ${goals ? "bg-[#B22222]" : "bg-dev-blue-dark hover:bg-gradient-to-r from-dev-blue to-dev-blue-dark"} `}
-            >
-              {goals ? "Closed" : "Read more"}
-            </button>
-          </div>
-          <div className="flex flex-col gap-5">
-            <About />
-            <Education />
-            <Skills />
           </div>
         </div>
+        <ProfesionalGoals />
+        {/* <Study /> */}
       </div>
-      <ProfesionalGoals />
-      {/* <Study /> */}
     </section>
   );
 };
