@@ -1,5 +1,5 @@
 import { PiStudent } from "react-icons/pi";
-import TitleAbout from "../../title/TitleAbout";
+import TitleAbout from "../../../title/TitleAbout";
 
 const Education = () => {
   return (
