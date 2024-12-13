@@ -1,23 +1,24 @@
 import { BsPersonVideo3 } from "react-icons/bs";
-import TitleAbout from "../../../title/TitleAbout";
+import LayoutSections from "../../../../layouts/LayoutSections";
 
-const About = () => {
+const AboutAboutMe = () => {
   return (
-    <div className="flex flex-col gap-4">
-      <TitleAbout
-        icons={<BsPersonVideo3 />}
-        title="About"
-        subtitle="A short story of me"
-      />
-      <p className="text-sm leading-normal">
-        Saya seorang pengembang frontend yang berspesialisasi dalam membangun
-        aplikasi web yang dinamis dan responsif menggunakan React JS dan
-        Tailwind CSS. Dengan dasar yang kuat dalam JavaScript, HTML, dan CSS,
-        saya membuat antarmuka pengguna yang tidak hanya menarik secara visual
-        tetapi juga sangat fungsional dan efisien.
-      </p>
-    </div>
+    <LayoutSections
+      title="About"
+      subTitle="A short story of me"
+      icons={<BsPersonVideo3 />}
+    >
+      <div className="p-4 text-sm border rounded border-dev-black/20 text-dev-black ">
+        <p className="text-sm leading-normal">
+          Saya seorang pengembang frontend yang berspesialisasi dalam membangun
+          aplikasi web yang dinamis dan responsif menggunakan React JS dan
+          Tailwind CSS. Dengan dasar yang kuat dalam JavaScript, HTML, dan CSS,
+          saya membuat antarmuka pengguna yang tidak hanya menarik secara visual
+          tetapi juga sangat fungsional dan efisien.
+        </p>
+      </div>
+    </LayoutSections>
   );
 };
 
-export default About;
+export default AboutAboutMe;

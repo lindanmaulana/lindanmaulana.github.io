@@ -1,10 +1,10 @@
 import { PiStudent } from "react-icons/pi";
-import TitleAbout from "../../../title/TitleAbout";
+import Title from "../../../title/Title";
 
-const Education = () => {
+const AboutPersonEducation = () => {
   return (
     <div className="flex flex-col gap-4">
-      <TitleAbout icons={<PiStudent />} title="Education" subtitle="Educational Background" />
+      <Title icons={<PiStudent />} title="Education" subtitle="Educational Background" />
       <ul className="flex items-center gap-4">
         <li className="flex flex-col gap-1 p-4 border rounded-lg border-dev-black/20 ">
           <h5 className="text-xs font-montserrat-light">2023 - present</h5>
@@ -29,4 +29,4 @@ const Education = () => {
   );
 };
 
-export default Education;
+export default AboutPersonEducation;

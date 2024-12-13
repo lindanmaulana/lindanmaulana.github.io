@@ -1,15 +1,11 @@
 import { RxCode } from "react-icons/rx";
-import TitleAbout from "../../../../title/TitleAbout";
+import Title from "../../../../title/Title";
 import ListSkill from "./listSkill";
 
-const Skills = () => {
+const AboutPersonSkills = () => {
   return (
     <div className="flex flex-col gap-4">
-      <TitleAbout
-        icons={<RxCode />}
-        title="Skills"
-        subtitle="My coding skills"
-      />
+      <Title title="Skills" subtitle="My coding skills" icons={<RxCode />} />
       <div className="flex items-center gap-6">
         <ListSkill />
       </div>
@@ -17,4 +13,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default AboutPersonSkills;

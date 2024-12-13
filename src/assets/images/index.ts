@@ -2,12 +2,15 @@ import me from "./me.png";
 import homeIcon from "./home-icon.png";
 import homeIcon2 from "./home-icon-2.png";
 import meTtd from "./me-ttd.png";
+import github from "./github.png"
+
 
 export const ImageHome = {
   me,
   homeIcon,
   homeIcon2,
   meTtd,
+  github
 };
 
 import gifUser from "./user.gif"

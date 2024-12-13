@@ -1,16 +1,9 @@
-import { useDispatch, useSelector } from "react-redux";
 import { ImageHome } from "../../../../assets/images";
-import { AppDispatch, RootState } from "../../../../redux/store";
-import { handleGoals } from "../../../../redux/slices/about";
-import Education from "./education";
-import Skills from "./skills";
+import AboutPersonEducation from "./AboutPersonEducation";
+import AboutPersonSkills from "./skills";
 
 const AboutPerson = () => {
-  const { goals } = useSelector((state: RootState) => state.about);
-  const dispatch = useDispatch<AppDispatch>();
-  const handleReadMore = () => {
-    dispatch(handleGoals());
-  };
+
   return (
     <div className="flex gap-10">
       <div className="flex flex-col items-center justify-center">
@@ -33,20 +26,10 @@ const AboutPerson = () => {
           <h5 className="text-sm">Student,</h5>
           <h5 className="text-sm">Frontend Developer</h5>
         </div>
-        <button
-          onClick={handleReadMore}
-          className={`px-4 py-2 text-xs text-white rounded   ${
-            goals
-              ? "bg-[#B22222]"
-              : "bg-dev-blue-dark hover:bg-gradient-to-r from-dev-blue to-dev-blue-dark"
-          } `}
-        >
-          {goals ? "Closed" : "Read more"}
-        </button>
       </div>
       <div className="flex flex-col gap-5">
-        <Education />
-        <Skills />
+        <AboutPersonEducation />
+        <AboutPersonSkills />
       </div>
     </div>
   );

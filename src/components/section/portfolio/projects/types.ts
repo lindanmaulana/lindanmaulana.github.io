@@ -1,7 +1,10 @@
 import { IconType } from "react-icons";
-import { FaHtml5, FaReact } from "react-icons/fa";
+import { FaCss3Alt, FaHtml5, FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiExpress, SiMongodb, SiTypescript } from "react-icons/si";
+import { SiChakraui, SiExpress, SiMongodb, SiTypescript } from "react-icons/si";
+
+export type techStack = string;
+export const dataTechStack: techStack[] = [""];
 
 export interface tech {
   icon: IconType;
@@ -16,6 +19,7 @@ export interface project {
   description: string;
   url: string;
   tech: tech[];
+  type: string;
 }
 
 export const dataProject: project[] = [
@@ -31,7 +35,9 @@ export const dataProject: project[] = [
         color: "color-tailwindcss",
       },
     ],
-    description: "",
+    description:
+      "Web Design Conference: A premier event for designers and developers to explore the latest trends, tools, and techniques in web design. Join us for workshops, keynotes, and networking to elevate your skills and creativity.",
+    type: "frontend",
     url: "https://web-design-cofference.vercel.app/",
   },
   {
@@ -46,7 +52,9 @@ export const dataProject: project[] = [
         color: "color-tailwindcss",
       },
     ],
-    description: "",
+    description:
+      "Rumah Impian: Hunian ideal yang menggabungkan kenyamanan, keindahan, dan fungsionalitas. Dirancang untuk menciptakan suasana harmonis dan menjadi tempat tinggal yang sempurna bagi Anda dan keluarga.",
+    type: "frontend",
     url: "https://rumah-impian-three.vercel.app/",
   },
   {
@@ -61,7 +69,9 @@ export const dataProject: project[] = [
         color: "color-tailwindcss",
       },
     ],
-    description: "",
+    description:
+      "Visa Made Easy, Dreams Made Possible: Solusi terpercaya untuk membantu Anda mewujudkan impian ke luar negeri dengan proses visa yang mudah, cepat, dan tanpa ribet.",
+    type: "frontend",
     url: "https://visa-easy-services.vercel.app/",
   },
   {
@@ -76,7 +86,9 @@ export const dataProject: project[] = [
         color: "color-tailwindcss",
       },
     ],
-    description: "",
+    description:
+      "Linm Store: Toko terpercaya dengan beragam produk berkualitas untuk memenuhi kebutuhan Anda. Temukan kenyamanan berbelanja dengan harga terbaik dan pelayanan terbaik.",
+    type: "frontend",
     url: "https://linm-store.vercel.app/",
   },
   {
@@ -91,7 +103,9 @@ export const dataProject: project[] = [
         color: "color-tailwindcss",
       },
     ],
-    description: "",
+    description:
+      "Raining Offers for Hot Summers: Nikmati diskon dan penawaran spesial untuk membuat musim panas Anda semakin seru dan hemat!",
+    type: "frontend",
     url: "https://dnk-com.vercel.app/",
   },
   {
@@ -106,7 +120,9 @@ export const dataProject: project[] = [
         color: "color-tailwindcss",
       },
     ],
-    description: "",
+    description:
+      "General Muncangela: Organisasi komunitas yang berkomitmen untuk memajukan kampung melalui kolaborasi, pemberdayaan, dan kegiatan sosial yang berdampak positif bagi semua warganya.",
+    type: "frontend",
     url: "https://general-muncangela.vercel.app/",
   },
   {
@@ -122,7 +138,8 @@ export const dataProject: project[] = [
       },
       { icon: SiTypescript, name: "Typescript", color: "color-typescript" },
     ],
-    description: "",
+    description: "Web application, about event",
+    type: "frontend",
     url: "https://event-semina-bwa.vercel.app/",
   },
   {
@@ -138,7 +155,9 @@ export const dataProject: project[] = [
       },
       { icon: SiTypescript, name: "Typescript", color: "color-typescript" },
     ],
-    description: "",
+    description:
+      "Weserve Web Hosting: Layanan hosting andal dengan kecepatan tinggi, keamanan terbaik, dan dukungan penuh untuk kebutuhan website Anda. Solusi sempurna untuk mengonlinekan bisnis Anda.",
+    type: "frontend",
     url: "https://weserve-hosting-bwa.vercel.app/",
   },
   {
@@ -153,7 +172,9 @@ export const dataProject: project[] = [
         color: "color-tailwindcss",
       },
     ],
-    description: "",
+    description:
+      "Nidejia Website: Temukan ruang hidup yang luar biasa dan penuh cinta, tempat di mana kenyamanan dan keindahan bertemu untuk menciptakan rumah impian Anda.",
+    type: "frontend",
     url: "https://nidejia-bwa.vercel.app/",
   },
   {
@@ -168,7 +189,9 @@ export const dataProject: project[] = [
         color: "color-tailwindcss",
       },
     ],
-    description: "",
+    description:
+      "Bennar Finance: Solusi keuangan terpercaya untuk membantu merencanakan dan mengelola keuangan Anda dengan bijak. Kami hadir untuk memberikan kemudahan dalam mencapai tujuan finansial Anda.",
+    type: "frontend",
     url: "https://bennar-finance.vercel.app/",
   },
   {
@@ -184,7 +207,9 @@ export const dataProject: project[] = [
       },
       { icon: SiTypescript, name: "Typescript", color: "color-typescript" },
     ],
-    description: "",
+    description:
+      "Yesplis: Platform penjualan tiket konser yang memudahkan Anda untuk menemukan dan membeli tiket acara musik favorit. Dengan antarmuka yang sederhana dan proses pemesanan yang cepat, Yesplis memastikan pengalaman pembelian tiket yang aman dan menyenangkan bagi para penggemar musik.",
+    type: "frontend",
     url: "https://yesplis-copy.vercel.app/",
   },
   {
@@ -200,7 +225,9 @@ export const dataProject: project[] = [
       },
       { icon: SiTypescript, name: "Typescript", color: "color-typescript" },
     ],
-    description: "",
+    description:
+      "Premium Web Hosting for Your Website: Layanan hosting berkualitas tinggi dengan kecepatan maksimal, keamanan tingkat lanjut, dan dukungan 24/7 untuk memastikan website Anda selalu berjalan dengan lancar dan handal.",
+    type: "frontend",
     url: "https://lemon-wares-tau.vercel.app/",
   },
   {
@@ -216,7 +243,9 @@ export const dataProject: project[] = [
       },
       { icon: SiTypescript, name: "Typescript", color: "color-typescript" },
     ],
-    description: "",
+    description:
+      "website providing marketing services for various digital, physical and digital learning products. This website is managed directly by LinmID Developer",
+    type: "frontend",
     url: "https://linm-id-tech.vercel.app/",
   },
   {
@@ -231,10 +260,12 @@ export const dataProject: project[] = [
         color: "color-tailwindcss",
       },
       { icon: SiTypescript, name: "Typescript", color: "color-typescript" },
-      { icon: SiExpress, name: "Express Js", color: "color-express" },
+      { icon: SiExpress, name: "ExpressJs", color: "color-express" },
       { icon: SiMongodb, name: "MongoDB", color: "color-mongodb" },
     ],
-    description: "",
+    description:
+      "Kopi Array is a coffee sales website designed to meet the needs of three types of users: Admin, User, and Guest. This website offers an easy, fast and user-friendly shopping experience, from product management to the ordering process.",
+    type: "fullstack",
     url: "https://linm-id-tech.vercel.app/",
   },
   {
@@ -249,10 +280,12 @@ export const dataProject: project[] = [
         color: "color-tailwindcss",
       },
       { icon: SiTypescript, name: "Typescript", color: "color-typescript" },
-      { icon: SiExpress, name: "Express Js", color: "color-express" },
+      { icon: SiExpress, name: "ExpressJs", color: "color-express" },
       { icon: SiMongodb, name: "MongoDB", color: "color-mongodb" },
     ],
-    description: "",
+    description:
+      "This website was designed using technology and a full JavaScript stack, namely MERN",
+    type: "fullstack",
     url: "https://linm-id-tech.vercel.app/",
   },
   {
@@ -267,10 +300,12 @@ export const dataProject: project[] = [
         color: "color-tailwindcss",
       },
       { icon: SiTypescript, name: "Typescript", color: "color-typescript" },
-      { icon: SiExpress, name: "Express Js", color: "color-express" },
+      { icon: SiExpress, name: "ExpressJs", color: "color-express" },
       { icon: SiMongodb, name: "MongoDB", color: "color-mongodb" },
     ],
-    description: "",
+    description:
+      "Simple ATM: Layanan ATM yang mudah diakses, cepat, dan aman, memberikan kenyamanan transaksi finansial kapan saja dan di mana saja.",
+    type: "fullstack",
     url: "https://linm-id-tech.vercel.app/",
   },
   {
@@ -285,7 +320,110 @@ export const dataProject: project[] = [
         color: "color-tailwindcss",
       },
     ],
-    description: "",
+    description:
+      "Learning Courses: Platform pembelajaran online dengan berbagai kursus berkualitas untuk mengembangkan keterampilan dan pengetahuan Anda. Belajar kapan saja, di mana saja, dengan materi yang up-to-date dan pengajaran yang terstruktur.",
+    type: "frontend",
     url: "https://linm-id-tech.vercel.app/",
+  },
+  {
+    id: 18,
+    title: "Trafalgar",
+    image: "https://imgur.com/jUm5dqn.png",
+    tech: [
+      { icon: FaHtml5, name: "Html", color: "color-html" },
+      {
+        icon: FaCss3Alt,
+        name: "Css",
+        color: "color-css",
+      },
+    ],
+    description:
+      "Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone",
+    type: "frontend",
+    url: "/portfolio",
+  },
+  {
+    id: 19,
+    title: "Portfolio",
+    image: "https://imgur.com/nbIhQ3n.png",
+    tech: [
+      { icon: FaHtml5, name: "Html", color: "color-html" },
+      {
+        icon: RiTailwindCssFill,
+        name: "Tailwindcss",
+        color: "color-tailwindcss",
+      },
+    ],
+    description:
+      "Portfolio saya yang di bangun dengan html + tailwindcss ini juga yang menjadi awal saya mengenal apa itu tailwindcss",
+    type: "frontend",
+    url: "/portfolio",
+  },
+  {
+    id: 20,
+    title: "Site Masa Depanku, Pilihan Bersama",
+    image: "https://imgur.com/GuuayfZ.png",
+    tech: [
+      { icon: FaReact, name: "ReactJs", color: "color-react" },
+      {
+        icon: RiTailwindCssFill,
+        name: "Tailwindcss",
+        color: "color-tailwindcss",
+      },
+    ],
+    description:
+      "Site untuk mengenalkan bahwa pilihan seorang anak juga pilihan orang tua dalam mencapai masa depan anaknya, SMAN 1 Ciawigebang Kelompok 4 P5 kelas XI. A-1",
+    type: "frontend",
+    url: "/portfolio",
+  },
+  {
+    id: 21,
+    title: "Cek Resi Pesanan Online",
+    image: "https://imgur.com/hOvcv2q.png",
+    tech: [
+      { icon: FaReact, name: "ReactJs", color: "color-react" },
+      {
+        icon: SiChakraui,
+        name: "Chakra UI",
+        color: "color-chakraui",
+      },
+    ],
+    description: "Site penyedia pengecekan resi pesanan online.",
+    type: "frontend",
+    url: "/portfolio",
+  },
+  {
+    id: 22,
+    title: "Alquran Indonesia",
+    image: "https://imgur.com/CAHVBL4.png",
+    tech: [
+      { icon: FaReact, name: "ReactJs", color: "color-react" },
+      {
+        icon: RiTailwindCssFill,
+        name: "Tailwindcss",
+        color: "color-tailwindcss",
+      },
+    ],
+    description:
+      "Penyedia Alquran bahasa indonesia secara online untuk di baca kapan saja dan dimana saja.",
+    type: "frontend",
+    url: "/portfolio",
+  },
+  {
+    id: 23,
+    title: "Portfolio",
+    image: "https://imgur.com/eI3Ak5P.png",
+    tech: [
+      { icon: FaReact, name: "ReactJs", color: "color-react" },
+      {
+        icon: RiTailwindCssFill,
+        name: "Tailwindcss",
+        color: "color-tailwindcss",
+      },
+    ],
+    description:
+      "Portfolio kedua saya di bangun dengan ReactJs + tailwindcss, ini menjadi acuan saya untuk mengeksplor apa itu react js.",
+    type: "frontend",
+    url: "https://lindan-maulana-dev.vercel.app/",
   },
 ];

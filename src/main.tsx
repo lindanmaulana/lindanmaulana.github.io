@@ -8,6 +8,7 @@ import PageHome from "./pages/home/index.tsx";
 import Pages from "./pages/index.tsx";
 import PagePortfolio from "./pages/portfolio/index.tsx";
 import store from "./redux/store.ts";
+import PageDetailPortfolio from "./pages/portfolio/DetailPortfolio.tsx";
 
 
 
@@ -26,7 +27,11 @@ const router = createBrowserRouter([
       },
       {
         path: "portfolio",
-        element: <PagePortfolio />
+        element: <PagePortfolio />,
+      },
+      {
+        path: "portfolio/:name",
+        element: <PageDetailPortfolio />
       }
     ]
   }

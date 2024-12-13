@@ -9,11 +9,11 @@ import { BsCloudMoon, BsCloudSun } from "react-icons/bs";
 import { handleMode } from "../../redux/slices/theme";
 
 const Navbar = () => {
-  const {
-    navbar: { sidebar },
-    theme: { darkMode },
-  } = useSelector((state: RootState) => state);
+  const { sidebar } = useSelector((state: RootState) => state.navbar);
+  const { darkMode } = useSelector((state: RootState) => state.theme);
+
   const dispatch = useDispatch<AppDispatch>();
+
   const handleBar = () => {
     dispatch(handleSidebar());
   };
@@ -30,8 +30,8 @@ const Navbar = () => {
       onMouseEnter={handleBar}
       onMouseLeave={handleOutBar}
       className={`flex flex-col bg-white dark:bg-dev-black shadow-lg shadow-dev-black/50 h-screen z-50 fixed justify-between text-white left-0 top-0  ${
-        sidebar ? "w-[260px]" : "w-[78px]"
-      } py-6 px-2 transition-global`}
+        sidebar ? "w-[280px] px-4" : "w-[78px] px-2"
+      } py-6 transition-global`}
     >
       <div
         className={`relative flex flex-col h-20 mb-14 ${
@@ -95,7 +95,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 py-1 border-t">
         <NavbarList />
       </div>
       <div
@@ -122,9 +122,9 @@ const Navbar = () => {
           <TfiLinkedin />
         </a>
       </div>
-      <div className="mt-4 text-center text-white ">
+      <div className="mt-4 text-center ">
         <p
-          className={` ${sidebar ? "text-[10px]" : "text-[8px] line-clamp-1"} `}
+          className={` ${sidebar ? "text-[10px]" : "text-[8px] line-clamp-1"} text-dev-black dark:text-white `}
         >
           Copyright ©2023 Lindan Maulana. All right reserved.
         </p>

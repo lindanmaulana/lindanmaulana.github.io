@@ -1,7 +1,8 @@
 import { Typewriter } from "react-simple-typewriter";
-import About from "./aboutMe";
+import AboutAboutMe from "./aboutMe";
+import AboutGithubUnwrapped from "./githubUnwraped";
 import AboutPerson from "./person";
-import ProfesionalGoals from "./professionalGoals";
+import AboutProfesionalGoals from "./professionalGoals";
 
 const AboutMe = () => {
   return (
@@ -18,10 +19,11 @@ const AboutMe = () => {
             delaySpeed={1000}
           />
         </div>
-        <div className="flex flex-col justify-center h-full gap-10">
-          <About />
+        <div className="flex flex-col justify-center h-full gap-10 py-4">
+          <AboutAboutMe />
           <AboutPerson />
-          <ProfesionalGoals />
+          <AboutProfesionalGoals />
+          <AboutGithubUnwrapped />
         </div>
       </div>
     </section>

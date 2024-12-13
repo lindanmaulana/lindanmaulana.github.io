@@ -29,6 +29,7 @@ export default {
         "color-typescript": "#3178C6",
         "color-mongodb": "#47A248",
         "color-express": "#000000",
+        "color-chakraui": "#38A169",
       },
       scrollbarWidth: {
         none: "none",
