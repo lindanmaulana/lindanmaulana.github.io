@@ -1,11 +1,11 @@
-import BannerHome from "../../components/section/home/banner";
-import Services from "../../components/section/home/services";
+import HomeBanner from "../../components/section/home/banner";
+import HomeServices from "../../components/section/home/services";
 
 const PageHome = () => {
   return (
     <>
-      <BannerHome />
-      <Services />
+      <HomeBanner />
+      <HomeServices />
       {/* <Hero /> */}
     </>
   );

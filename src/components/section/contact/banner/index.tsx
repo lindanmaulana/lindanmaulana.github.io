@@ -1,12 +1,12 @@
 import { Typewriter } from "react-simple-typewriter";
 import Title from "../../../title/Title";
 
-const PortfolioBanner = () => {
+const ContactBanner = () => {
   return (
     <section className="pt-16 pb-5">
       <div className="container max-w-4xl">
         <Typewriter
-          words={["Nice to meet you!", "Welcome to My Portfolio"]}
+          words={["Nice to meet you!", "Welcome to My Contact"]}
           loop={true}
           cursor
           cursorStyle="_"
@@ -14,12 +14,11 @@ const PortfolioBanner = () => {
           deleteSpeed={60}
           delaySpeed={1000}
         />
-
         <div>
           <Title
             style="border-b border-dashed border-dev-black-gray pb-4"
-            title="Portfolio"
-            subtitle="Showcasing my passion for technology, design, and problem-solving through code."
+            title="Contact"
+            subtitle="Let`s get in touch"
           />
         </div>
       </div>
@@ -27,4 +26,4 @@ const PortfolioBanner = () => {
   );
 };
 
-export default PortfolioBanner;
+export default ContactBanner;

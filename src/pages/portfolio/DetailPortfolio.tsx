@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import PortfolioDetail from "../../components/section/portfolio/detail"
 import { dataProject, project } from "../../components/section/portfolio/projects/types"
-import DetailPortfolio from "../../components/section/portfolio/detail"
 
 const PageDetailPortfolio = () => {
     const {name} = useParams()
@@ -22,7 +22,7 @@ const PageDetailPortfolio = () => {
     console.log({dataDetailPortfolio})
   return (
     <>
-      <DetailPortfolio data={dataDetailPortfolio} />
+      <PortfolioDetail data={dataDetailPortfolio} />
     </>
   )
 }

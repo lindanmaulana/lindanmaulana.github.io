@@ -30,6 +30,9 @@ export default {
         "color-mongodb": "#47A248",
         "color-express": "#000000",
         "color-chakraui": "#38A169",
+        "color-github": "#181717",
+        "color-linkedin": "#0A66C2",
+        "color-instagram": "#E1306C"
       },
       scrollbarWidth: {
         none: "none",

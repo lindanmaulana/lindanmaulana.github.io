@@ -1,7 +1,7 @@
 import { FaServicestack } from "react-icons/fa";
 import LayoutSections from "../../../../layouts/LayoutSections";
-import ServiceListItems from "./ServiceListItems";
-const Services = () => {
+import HomeServiceListItems from "./ServiceListItems";
+const HomeServices = () => {
   return (
     <LayoutSections
     styleSection="py-5"
@@ -10,10 +10,10 @@ const Services = () => {
       subTitle="I can deliver the following services"
     >
       <div className="grid grid-cols-3 gap-4">
-        <ServiceListItems />
+        <HomeServiceListItems />
       </div>
     </LayoutSections>
   );
 };
 
-export default Services;
+export default HomeServices;

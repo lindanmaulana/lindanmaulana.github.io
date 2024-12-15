@@ -4,7 +4,7 @@ import { IoArrowBackCircleOutline } from "react-icons/io5";
 import { project } from "../projects/types";
 import { PiMonitorPlay } from "react-icons/pi";
 
-const DetailPortfolio = (props: { data: project }) => {
+const PortfolioDetail = (props: { data: project }) => {
   const { data } = props;
   return (
     <LayoutSections styleContainer="py-14">
@@ -53,4 +53,4 @@ const DetailPortfolio = (props: { data: project }) => {
   );
 };
 
-export default DetailPortfolio;
+export default PortfolioDetail;

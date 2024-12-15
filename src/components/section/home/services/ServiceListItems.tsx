@@ -1,6 +1,6 @@
 import { dataService } from "./types"
 
-const ServiceListItems = () => {
+const HomeServiceListItems = () => {
   return (
     <>
       {dataService?.map(service => (
@@ -19,4 +19,4 @@ const ServiceListItems = () => {
   )
 }
 
-export default ServiceListItems
+export default HomeServiceListItems

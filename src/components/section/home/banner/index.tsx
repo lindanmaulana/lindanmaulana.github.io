@@ -1,7 +1,7 @@
 import { TbPointFilled } from "react-icons/tb";
 import { Typewriter } from "react-simple-typewriter";
 
-const BannerHome = () => {
+const HomeBanner = () => {
   return (
     <section className="pt-16 pb-5">
       <div className="container max-w-4xl">
@@ -37,4 +37,4 @@ const BannerHome = () => {
   );
 };
 
-export default BannerHome;
+export default HomeBanner;
