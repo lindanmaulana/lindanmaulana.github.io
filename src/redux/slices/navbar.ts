@@ -2,10 +2,12 @@ import { createSlice } from "@reduxjs/toolkit"
 
 interface stateNavbar {
     sidebar: boolean
+    navbar: boolean
 }
 
 const initialState: stateNavbar = {
-    sidebar: false
+    sidebar: false,
+    navbar: false
 }
 
 const FeaturesNavbar = createSlice({
@@ -18,8 +20,12 @@ const FeaturesNavbar = createSlice({
 
         handleOutSideBar: (state) => {
             state.sidebar = false
+        },
+
+        hanldeNavbarMobile: (state) => {
+            state.navbar = !state.navbar
         }
     }
 })
-export const {handleSidebar, handleOutSideBar} = FeaturesNavbar.actions
+export const {handleSidebar, handleOutSideBar, hanldeNavbarMobile} = FeaturesNavbar.actions
 export default FeaturesNavbar.reducer

@@ -1,6 +1,7 @@
 import { IconType } from "react-icons";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { BiLeaf } from "react-icons/bi";
+import { GoCommentDiscussion } from "react-icons/go";
 import { GrSend } from "react-icons/gr";
 import { RiHome9Line } from "react-icons/ri";
 
@@ -36,4 +37,10 @@ export const dataNavar: navbar[] = [
     icon: GrSend,
     to: "/contact",
   },
+  {
+    id: 5,
+    title: "Discussion",
+    icon: GoCommentDiscussion,
+    to: "/discussion"
+  }
 ];

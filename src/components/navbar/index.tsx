@@ -28,7 +28,7 @@ const Navbar = () => {
     <div
       onMouseEnter={handleBar}
       onMouseLeave={handleOutBar}
-      className={`flex flex-col bg-white dark:bg-dev-black shadow-lg shadow-dev-black/50 h-screen z-50 fixed justify-start text-white left-0 top-0  ${
+      className={`flex-col bg-white dark:bg-dev-black hidden lg:flex shadow-lg shadow-dev-black/50 h-screen z-50 fixed justify-start text-white left-0 top-0  ${
         sidebar ? "w-[200px] px-4" : "w-[50px] px-2"
       } py-6 transition-global`}
     >

@@ -6,7 +6,7 @@ const AboutPersonSkills = () => {
   return (
     <div className="flex flex-col gap-4">
       <Title title="Skills" subtitle="My coding skills" icons={<RxCode />} />
-      <div className="flex flex-wrap items-center gap-6">
+      <div className="flex items-center gap-6 overflow-x-auto lg:overflow-hidden lg:flex-wrap">
         <ListSkill />
       </div>
     </div>

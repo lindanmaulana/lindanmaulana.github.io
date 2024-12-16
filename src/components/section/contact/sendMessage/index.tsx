@@ -48,7 +48,7 @@ const ContactSendMessage = () => {
   return (
     <LayoutSections styleSection="pt-5 pb-10" title="I'm open to opportunities—feel free to connect with me!">
       <form onSubmit={handleSubmitForm}>
-        <div className="grid w-full grid-cols-2 gap-3 mb-4">
+        <div className="grid w-full gap-3 mb-4 lg:grid-cols-2">
           <label htmlFor="" className="flex flex-col ">
             <input
               type="text"

@@ -4,12 +4,12 @@ import HomeServiceListItems from "./ServiceListItems";
 const HomeServices = () => {
   return (
     <LayoutSections
-    styleSection="py-5 dark:bg-dev-black"
+      styleSection="py-5 dark:bg-dev-black"
       icons={<FaServicestack />}
       title="Services"
       subTitle="I can deliver the following services"
     >
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid gap-4 overflow-x-auto lg:grid-cols-3">
         <HomeServiceListItems />
       </div>
     </LayoutSections>

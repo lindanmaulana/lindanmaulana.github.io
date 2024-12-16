@@ -11,6 +11,7 @@ import store from "./redux/store.ts";
 import PageDetailPortfolio from "./pages/portfolio/DetailPortfolio.tsx";
 import PageContact from "./pages/contact/index.tsx";
 import { QueryClient, QueryClientProvider } from "react-query";
+import PageChatRoom from "./pages/discussion/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
         path: "contact",
         element: <PageContact />,
       },
+      {
+        path: "discussion",
+        element: <PageChatRoom />
+      }
     ],
   },
 ]);

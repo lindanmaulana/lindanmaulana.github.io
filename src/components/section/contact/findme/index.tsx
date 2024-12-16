@@ -4,7 +4,7 @@ import { dataFindme } from "../types";
 const ContactFindme = () => {
   return (
     <LayoutSections title="Find me on" styleSection="py-5" styleContainer="pb-10 border-b border-dev-black/30">
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid gap-4 lg:grid-cols-2">
         {dataFindme?.map((findme) => {
           const hexToRgba = (hex: string, opacity: number) => {
             const r = parseInt(hex.substring(1, 3), 16);

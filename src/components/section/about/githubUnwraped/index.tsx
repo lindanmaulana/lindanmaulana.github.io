@@ -1,14 +1,12 @@
 import { IoMdImages } from "react-icons/io";
-import LayoutSections from "../../../../layouts/LayoutSections";
 import { ImageHome } from "../../../../assets/images";
+import Title from "../../../title/Title";
 
 const AboutGithubUnwrapped = () => {
   return (
-    <LayoutSections
-      title="Github Unwrapped"
-      subTitle="My coding journey on 2023"
-      icons={<IoMdImages />}
+    <div
     >
+      <Title title="Github Unwrapped" subtitle="My COding journey on 2023" icons={<IoMdImages />} />
       <a href="https://github.com/lindanmaulana" className="group">
         <figure className="overflow-hidden rounded ">
           <img
@@ -18,7 +16,7 @@ const AboutGithubUnwrapped = () => {
           />
         </figure>
       </a>
-    </LayoutSections>
+    </div>
   );
 };
 

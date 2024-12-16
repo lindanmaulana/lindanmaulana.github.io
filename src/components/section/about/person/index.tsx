@@ -5,7 +5,7 @@ import AboutPersonSkills from "./skills";
 const AboutPerson = () => {
 
   return (
-    <div className="flex gap-10">
+    <div className="flex flex-col gap-10 lg:flex-row">
       <div className="flex flex-col items-center justify-center">
         <div className="relative w-64 ">
           <img
