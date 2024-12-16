@@ -1,5 +1,5 @@
 import { IconType } from "react-icons";
-import { FaCss3Alt, FaHtml5, FaJs, FaReact } from "react-icons/fa";
+import { FaCss3Alt, FaGitAlt, FaHtml5, FaJs, FaNodeJs, FaReact } from "react-icons/fa";
 import {
   SiExpress,
   SiMongodb,
@@ -63,6 +63,18 @@ export const dataSkills: skill[] = [
     color: "text-color-express",
     name: "ExpressJS",
     icon: SiExpress,
+  },
+  {
+    id: 8,
+    color: "text-color-git",
+    name: "Git",
+    icon: FaGitAlt,
+  },
+  {
+    id: 9,
+    color: "text-color-nodejs",
+    name: "Nodejs",
+    icon: FaNodeJs,
   },
 ];
 

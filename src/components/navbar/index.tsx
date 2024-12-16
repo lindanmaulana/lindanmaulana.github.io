@@ -1,12 +1,11 @@
-import { TfiGithub, TfiInstagram, TfiLinkedin } from "react-icons/tfi";
+import { BsCloudMoon, BsCloudSun } from "react-icons/bs";
+import { MdVerified } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
+import { BackgroundImage, ImageHome } from "../../assets/images";
 import { handleOutSideBar, handleSidebar } from "../../redux/slices/navbar";
+import { handleMode } from "../../redux/slices/theme";
 import { AppDispatch, RootState } from "../../redux/store";
 import NavbarList from "./list";
-import { BackgroundImage, ImageHome } from "../../assets/images";
-import { MdVerified } from "react-icons/md";
-import { BsCloudMoon, BsCloudSun } from "react-icons/bs";
-import { handleMode } from "../../redux/slices/theme";
 
 const Navbar = () => {
   const { sidebar } = useSelector((state: RootState) => state.navbar);
@@ -29,14 +28,14 @@ const Navbar = () => {
     <div
       onMouseEnter={handleBar}
       onMouseLeave={handleOutBar}
-      className={`flex flex-col bg-white dark:bg-dev-black shadow-lg shadow-dev-black/50 h-screen z-50 fixed justify-between text-white left-0 top-0  ${
-        sidebar ? "w-[280px] px-4" : "w-[78px] px-2"
+      className={`flex flex-col bg-white dark:bg-dev-black shadow-lg shadow-dev-black/50 h-screen z-50 fixed justify-start text-white left-0 top-0  ${
+        sidebar ? "w-[200px] px-4" : "w-[50px] px-2"
       } py-6 transition-global`}
     >
       <div
         className={`relative flex flex-col h-20 mb-14 ${
           sidebar ? "bg-none" : "bg-none"
-        } bg-no-repeat bg-cover rounded`}
+        } bg-no-repeat bg-cover rounded mb-24`}
         style={{
           backgroundImage: ` ${
             sidebar ? `url(${BackgroundImage.bgNav})` : "none"
@@ -55,21 +54,28 @@ const Navbar = () => {
 
             <button
               onClick={handleDarkMode}
-              className="absolute z-10 p-2 text-base bg-white rounded-lg bottom-2 right-2 text-dev-black"
+              className="absolute z-10 p-1 text-sm bg-white rounded-lg bottom-2 right-2 text-dev-black"
             >
               {darkMode ? <BsCloudMoon /> : <BsCloudSun />}
             </button>
           </>
-        ) : null}
+        ) : (
+          <button
+            onClick={handleDarkMode}
+            className="absolute z-10 p-1 text-sm translate-x-1/2 rounded-lg bg-black/5 -bottom-8 right-1/2 text-dev-black dark:text-white dark:bg-dev-black"
+          >
+            {darkMode ? <BsCloudMoon /> : <BsCloudSun />}
+          </button>
+        )}
 
         <div
           className={`absolute flex gap-2 flex-col w-full justify-center items-center overflow-hidden translate-x-1/2 ${
-            sidebar ? " -bottom-24" : " top-5"
+            sidebar ? " -bottom-28" : " top-5"
           } right-1/2`}
         >
           <figure
             className={`${
-              sidebar ? "w-24 -bottom-14" : "w-14 top-5 mr-1"
+              sidebar ? "w-24" : "w-8"
             } bg-gray-600 ring-white rounded-full ring-1 overflow-hidden`}
           >
             <img
@@ -95,39 +101,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-2 py-1 border-t">
+      <div className="flex flex-col gap-2 py-1 mt-10 border-t">
         <NavbarList />
-      </div>
-      <div
-        className={`flex ${
-          sidebar ? "flex-row" : "flex-col"
-        } justify-center items-center gap-2 text-white dark:text-dev-black`}
-      >
-        <a
-          href="https://www.instagram.com/qqqqmln"
-          className="p-1 text-xs rounded-full dark:bg-white bg-dev-black-gray"
-        >
-          <TfiInstagram />
-        </a>
-        <a
-          href="https://www.github.com/lindanmaulana"
-          className="p-1 text-xs rounded-full dark:bg-white bg-dev-black-gray"
-        >
-          <TfiGithub />
-        </a>
-        <a
-          href="https://www.github.com/lindanmaulana"
-          className="p-1 text-xs rounded-full dark:bg-white bg-dev-black-gray"
-        >
-          <TfiLinkedin />
-        </a>
-      </div>
-      <div className="mt-4 text-center ">
-        <p
-          className={` ${sidebar ? "text-[10px]" : "text-[8px] line-clamp-1"} text-dev-black dark:text-white `}
-        >
-          Copyright ©2023 Lindan Maulana. All right reserved.
-        </p>
       </div>
     </div>
   );

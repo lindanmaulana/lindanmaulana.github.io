@@ -4,7 +4,7 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     container: {
-      center: true
+      center: true,
     },
     extend: {
       fontFamily: {
@@ -12,7 +12,7 @@ export default {
         "montserrat-medium": ["Montserrat-Medium"],
         "montserrat-bold": ["Montserrat-Bold"],
         "montserrat-regular": ["Montserrat-Regular"],
-        "Geist": ["Geist"]
+        Geist: ["Geist"],
       },
       colors: {
         "dev-black": "#141313",
@@ -32,7 +32,9 @@ export default {
         "color-chakraui": "#38A169",
         "color-github": "#181717",
         "color-linkedin": "#0A66C2",
-        "color-instagram": "#E1306C"
+        "color-instagram": "#E1306C",
+        "color-git": "#F05539",
+        "color-nodejs": "#188C38"
       },
       scrollbarWidth: {
         none: "none",

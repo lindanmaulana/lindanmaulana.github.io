@@ -7,9 +7,9 @@ const Projects = () => {
   
 
   return (
-    <LayoutSections>
+    <LayoutSections styleSection="py-5">
      <ProjectFilter />
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-2 gap-4">
         <ProjectListItems />
       </div>
     </LayoutSections>

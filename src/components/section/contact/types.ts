@@ -1,5 +1,5 @@
 import { IconType } from "react-icons"
-import { FaGithub, FaLinkedin } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa"
 import { RiInstagramFill } from "react-icons/ri"
 
 export interface findme {
@@ -19,7 +19,7 @@ export const dataFindme: findme[] = [
         subtitle: "Explore the source code for all my projects on GitHub.",
         url: "https://github.com/lindanmaulana",
         icon: FaGithub,
-        color: "color-github",
+        color: "#1E293B",
         titleButton: "Go to Github"
     },
     {
@@ -28,7 +28,7 @@ export const dataFindme: findme[] = [
         subtitle: "Connect for collaboration or explore my professional experience.",
         url: "www.linkedin.com/in/lindan-maulana-ab86aa300",
         icon: FaLinkedin,
-        color: "color-linkedin",
+        color: "#2563EB",
         titleButton: "Go to Linkedin"
     },
     {
@@ -37,7 +37,16 @@ export const dataFindme: findme[] = [
         subtitle: "Explore my portfolio and behind-the-scenes moments on Instagram.",
         url: "https://www.instagram.com/qqqqmln",
         icon: RiInstagramFill,
-        color: "color-instagram",
+        color: "#E1306C",
         titleButton: "Go to Instagram"
+    },
+    {
+        id: 4,
+        title: "Talk to Me on WhatsApp",
+        subtitle: "Let's connect on WhatsApp for fast communication.",
+        url: "https://wa.me/6285322701120",
+        icon: FaWhatsapp,
+        color: "#25D366",
+        titleButton: "Go to WhatsApp"
     },
 ]

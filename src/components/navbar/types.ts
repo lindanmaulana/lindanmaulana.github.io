@@ -1,7 +1,8 @@
 import { IconType } from "react-icons";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
-import { HiHome, HiOutlineUserCircle } from "react-icons/hi";
-import { MdContacts } from "react-icons/md";
+import { BiLeaf } from "react-icons/bi";
+import { GrSend } from "react-icons/gr";
+import { RiHome9Line } from "react-icons/ri";
 
 export interface navbar {
   id: number | string;
@@ -14,13 +15,13 @@ export const dataNavar: navbar[] = [
   {
     id: 1,
     title: "Home",
-    icon: HiHome,
+    icon: RiHome9Line,
     to: "/",
   },
   {
     id: 2,
     title: "About Me",
-    icon: HiOutlineUserCircle,
+    icon: BiLeaf,
     to: "/aboutme",
   },
   {
@@ -32,7 +33,7 @@ export const dataNavar: navbar[] = [
   {
     id: 4,
     title: "Contact",
-    icon: MdContacts,
+    icon: GrSend,
     to: "/contact",
   },
 ];

@@ -6,9 +6,9 @@ import { RootState } from "../redux/store";
 const Pages = () => {
   const {darkMode} = useSelector((state: RootState) => state.theme)
   return (
-    <div className={`pl-20 ${darkMode ? "dark" : ""}`}>
+    <div className={`${darkMode ? "dark" : ""}`}>
       <Navbar />
-      <main>
+      <main >
         <Outlet />
       </main>
     </div>

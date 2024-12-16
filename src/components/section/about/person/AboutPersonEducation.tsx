@@ -3,7 +3,7 @@ import Title from "../../../title/Title";
 
 const AboutPersonEducation = () => {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col w-full gap-4">
       <Title icons={<PiStudent />} title="Education" subtitle="Educational Background" />
       <ul className="flex items-center gap-4">
         <li className="flex flex-col gap-1 p-4 border rounded-lg border-dev-black/20 ">

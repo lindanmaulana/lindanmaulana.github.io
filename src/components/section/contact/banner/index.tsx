@@ -4,7 +4,7 @@ import Title from "../../../title/Title";
 const ContactBanner = () => {
   return (
     <section className="pt-16 pb-5">
-      <div className="container max-w-4xl">
+      <div className="container max-w-3xl">
         <Typewriter
           words={["Nice to meet you!", "Welcome to My Contact"]}
           loop={true}

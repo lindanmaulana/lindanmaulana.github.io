@@ -40,20 +40,20 @@ const ProjectListItems = () => {
         <Link
           to={`/portfolio/${project.title}`}
           key={project.id}
-          className="overflow-hidden border border-dev-black-gray/20 cursor-pointer hover:scale-105 transition-global shadow-sm rounded-xl h-[400px]"
+          className="overflow-hidden border border-dev-black-gray/20 cursor-pointer hover:scale-105 transition-global shadow-sm rounded-xl h-[340px]"
         >
           <div className="flex flex-col justify-between h-full">
-            <figure className="h-[60%]">
+            <figure className="">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-full"
+                className="object-contain w-full h-full"
               />
             </figure>
             <div className="flex flex-col gap-3 p-5 h-[40%] ">
               <h3 className="text-lg text-dev-black-gray">{project.title}</h3>
               <p className="text-sm line-clamp-2 text-dev-black-gray">
-                {project.description}
+                {project.description}...
               </p>
               <div className="flex items-center gap-3">
                 {project.tech?.map((tech) => (

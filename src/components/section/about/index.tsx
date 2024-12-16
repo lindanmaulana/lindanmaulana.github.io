@@ -7,7 +7,7 @@ import AboutProfesionalGoals from "./professionalGoals";
 const AboutMe = () => {
   return (
     <section className="p-10 ">
-      <div className="container max-w-4xl">
+      <div className="container max-w-3xl ">
         <div>
           <Typewriter
             words={["Nice to meet you!", "Welcome to My Bio"]}

@@ -14,7 +14,7 @@ const LayoutSections = (props: LayoutSectionsProps) => {
     props;
   return (
     <section className={styleSection}>
-      <div className={`container max-w-4xl relative ${styleContainer}`}>
+      <div className={`container max-w-3xl relative ${styleContainer}`}>
         <div className="flex flex-col gap-4">
           <Title icons={icons} title={title} subtitle={subTitle} />
           {children}

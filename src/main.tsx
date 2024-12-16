@@ -10,8 +10,7 @@ import PagePortfolio from "./pages/portfolio/index.tsx";
 import store from "./redux/store.ts";
 import PageDetailPortfolio from "./pages/portfolio/DetailPortfolio.tsx";
 import PageContact from "./pages/contact/index.tsx";
-
-
+import { QueryClient, QueryClientProvider } from "react-query";
 
 const router = createBrowserRouter([
   {
@@ -20,11 +19,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <PageHome />
+        element: <PageHome />,
       },
       {
         path: "aboutme",
-        element: <PageAboutMe />
+        element: <PageAboutMe />,
       },
       {
         path: "portfolio",
@@ -32,20 +31,30 @@ const router = createBrowserRouter([
       },
       {
         path: "portfolio/:name",
-        element: <PageDetailPortfolio />
+        element: <PageDetailPortfolio />,
       },
       {
         path: "contact",
-        element: <PageContact />  
-      }
-    ]
-  }
-])
+        element: <PageContact />,
+      },
+    ],
+  },
+]);
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Provider store={store}>
-      <RouterProvider router={router} />
+      <QueryClientProvider client={queryClient}>
+        <RouterProvider router={router} />
+      </QueryClientProvider>
     </Provider>
   </StrictMode>
 );

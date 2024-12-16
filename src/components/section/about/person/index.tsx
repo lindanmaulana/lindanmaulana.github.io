@@ -7,7 +7,7 @@ const AboutPerson = () => {
   return (
     <div className="flex gap-10">
       <div className="flex flex-col items-center justify-center">
-        <div className="relative w-80 ">
+        <div className="relative w-64 ">
           <img
             src={ImageHome.me}
             alt="Lindan Maulana"
