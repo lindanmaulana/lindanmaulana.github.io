@@ -12,6 +12,7 @@ import PageDetailPortfolio from "./pages/portfolio/DetailPortfolio.tsx";
 import PageContact from "./pages/contact/index.tsx";
 import { QueryClient, QueryClientProvider } from "react-query";
 import PageChatRoom from "./pages/discussion/index.tsx";
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const router = createBrowserRouter([
   {

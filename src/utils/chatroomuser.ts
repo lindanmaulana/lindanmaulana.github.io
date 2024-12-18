@@ -1,6 +1,5 @@
 import axios, { AxiosError } from "axios"
 import { chat } from "./types"
-// const BASEURL = "https://lindan-maulana-be.vercel.app/api/v1"
 const BASEURL = import.meta.env.VITE_BASEURL
 
 
