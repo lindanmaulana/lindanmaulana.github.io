@@ -4,7 +4,9 @@ const BASEURL = import.meta.env.VITE_BASEURL
 
 export const ServiceCreateChat = async (data: chat) => {
     try {
-        const result = await axios.post(`${BASEURL}/chatroomuser`, data)
+        const result = await axios.post(`${BASEURL}/chatroomuser`, data, {
+            timeout: 5000
+        })
 
         return result.data
     } catch (err) {

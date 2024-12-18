@@ -6,7 +6,7 @@ const AboutGithubUnwrapped = () => {
   return (
     <div
     >
-      <Title title="Github Unwrapped" subtitle="My COding journey on 2023" icons={<IoMdImages />} />
+      <Title title="Github Unwrapped" subtitle="My Coding journey on 2023" icons={<IoMdImages />} />
       <a href="https://github.com/lindanmaulana" className="group">
         <figure className="overflow-hidden rounded ">
           <img

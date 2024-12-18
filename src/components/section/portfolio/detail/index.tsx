@@ -10,7 +10,7 @@ const PortfolioDetail = (props: { data: project }) => {
     <LayoutSections styleContainer="py-14">
       <Link
         to="/portfolio"
-        className="absolute left-0 flex items-center gap-2 text-base top-12 text-dev-black-gray"
+        className="absolute left-0 flex items-center gap-2 px-4 text-base top-12 text-dev-black-gray"
       >
         <IoArrowBackCircleOutline size={20} />
         Back

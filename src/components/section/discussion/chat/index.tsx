@@ -1,67 +1,59 @@
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
-import { useMutation, useQuery } from "react-query";
-import { z } from "zod";
-import { chat, dataChat } from "../../../../utils/types";
-import {
-  ServiceCreateChat,
-  ServiceGetAllChat,
-} from "../../../../utils/chatroomuser";
+import { IoIosAdd } from "react-icons/io";
+import { MdOutlineClear } from "react-icons/md";
+import { useQuery } from "react-query";
+import { useDispatch, useSelector } from "react-redux";
+import { handleClearAlertMessage } from "../../../../redux/slices/alert";
+import { handleAddChatUser } from "../../../../redux/slices/chatroomuser";
+import { AppDispatch, RootState } from "../../../../redux/store";
+import { ServiceGetAllChat } from "../../../../utils/chatroomuser";
 import { formatTimeStamps } from "../../../../utils/format";
-
-const Schema = z.object({
-  name: z
-    .string()
-    .min(3, "Name min 3 character")
-    .max(50, "Name max 50 character"),
-  chat: z.string().min(3, "Chat min 3 character"),
-});
-
-type chatRoomSchema = z.infer<typeof Schema>;
+import { dataChat } from "../../../../utils/types";
+import ChatRoomChatAddChat from "./ChatRoomChatAddChat";
 
 const ChatRoomChat = () => {
-  const {
-    handleSubmit,
-    formState: { errors },
-  } = useForm<chatRoomSchema>({
-    resolver: zodResolver(Schema),
-  });
+  const dispatch = useDispatch<AppDispatch>();
+  const { addChat } = useSelector((state: RootState) => state.chatRoomUser);
 
   const { data, isLoading, isError } = useQuery({
     queryKey: ["getAllChat"],
-    queryFn: () => ServiceGetAllChat(),
-  });
-
-  const { mutate } = useMutation({
-    mutationKey: ["createChat"],
-    mutationFn: (data: chat) => ServiceCreateChat(data),
-  });
-
-  const handleForm = handleSubmit((data: chat) => {
-    mutate(data, {
-      onSuccess: (data) => {
-        console.log("berhaisl");
-      },
-      onError: (err) => {
-        console.log("error gagal");
-      },
-    });
+    queryFn: () => {
+      setTimeout(() => {
+        dispatch(handleClearAlertMessage());
+      }, 1000);
+      return ServiceGetAllChat();
+    },
   });
 
   if (isLoading) return <h2>Loading..</h2>;
   if (isError) return <h2>Error..</h2>;
   console.log({ data });
 
+  const handleAddChat = () => {
+    dispatch(handleAddChatUser());
+  };
+
   return (
     <section>
-      <div className="container max-w-3xl px-4 lg:px-0">
-        <div className="flex flex-col h-screen gap-6 overflow-y-auto">
+      <div className="container relative max-w-3xl px-4 lg:px-0">
+        <div className="flex items-center justify-end ">
+          <button onClick={handleAddChat} className="text-xl">
+            {addChat ? <MdOutlineClear /> : <IoIosAdd />}
+          </button>
+        </div>
+        {addChat ? (
+          <div className="flex items-center justify-between">
+            <ChatRoomChatAddChat />
+          </div>
+        ) : null}
+        <div className="flex flex-col gap-6 pt-5 pb-10 overflow-y-auto h-80">
           {data.data.map((dt: dataChat) => {
             const tgl = formatTimeStamps(dt.createdAt);
             return (
               <div key={dt.id} className="flex items-start gap-3">
-                <div className="w-8 h-8 overflow-hidden rounded-full ">
-                    <span className="flex items-center justify-center w-full h-full text-center text-white rounded-full bg-dev-black-gray">{dt.name.substring(0, 1)}</span>
+                <div className="w-8 h-8 overflow-hidden rounded-full shrink-0 ">
+                  <span className="flex items-center justify-center w-full h-full text-center text-white rounded-full bg-dev-black-gray">
+                    {dt.name.substring(0, 1)}
+                  </span>
                 </div>
                 <div>
                   <h2 className="flex items-center gap-1 mb-1">

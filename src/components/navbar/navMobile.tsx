@@ -11,8 +11,8 @@ const NavMobile = () => {
 
   return (
     <>
-      <div className={`sticky  top-0 w-full right-0 lg:hidden z-10 bg-white dark:bg-dev-black`}>
-        <div className="relative flex items-center justify-between w-full p-6 ">
+      <div className={`sticky top-0 w-full right-0 lg:hidden z-10 bg-white dark:bg-dev-black`}>
+        <div className="relative flex items-center justify-between w-full px-4 py-6 ">
           <div className={` flex gap-2 w-full items-center`}>
             <figure
               className={`w-8 bg-gray-600 ring-white rounded-full ring-1 overflow-hidden`}

@@ -4,6 +4,7 @@ import FeaturesAbout from "./slices/about"
 import FeaturesTheme from "./slices/theme"
 import FeaturesPortfolio from "./slices/portfolio"
 import  FeaturesAlertMessage from "./slices/alert";
+import FeaturesChatRoomUser from "./slices/chatroomuser"
 
 const store = configureStore({
   reducer: {
@@ -11,7 +12,8 @@ const store = configureStore({
     about: FeaturesAbout,
     theme: FeaturesTheme,
     portfolio: FeaturesPortfolio,
-    alertMessage: FeaturesAlertMessage
+    alertMessage: FeaturesAlertMessage,
+    chatRoomUser: FeaturesChatRoomUser
   },
 });
 
