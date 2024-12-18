@@ -1,6 +1,7 @@
 import axios, { AxiosError } from "axios"
 import { feedback } from "./types"
-const BASEURL = import.meta.env.VITE_BASEURL
+const BASEURL = "https://lindan-maulana-be.vercel.app/api/v1"
+// const BASEURL = import.meta.env.VITE_BASEURL
 
 export const ServiceGetFeedbacks = async () => {
     try {
