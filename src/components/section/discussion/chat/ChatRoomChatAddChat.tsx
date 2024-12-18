@@ -1,16 +1,15 @@
-import { z } from "zod";
-import { formatTimeStamps } from "../../../../utils/format";
-import { chat, dataChat } from "../../../../utils/types";
-import { useMutation, useQueryClient } from "react-query";
-import { ServiceCreateChat } from "../../../../utils/chatroomuser";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useForm } from "react-hook-form";
 import { useState } from "react";
-import AlertMessage, { alert } from "../../../alert";
-import { getErrorMessage } from "../../../../utils/errorMessage";
+import { useForm } from "react-hook-form";
+import { useMutation, useQueryClient } from "react-query";
 import { useDispatch, useSelector } from "react-redux";
-import { AppDispatch, RootState } from "../../../../redux/store";
+import { z } from "zod";
 import { handleSetAlertMessage } from "../../../../redux/slices/alert";
+import { AppDispatch, RootState } from "../../../../redux/store";
+import { ServiceCreateChat } from "../../../../utils/chatroomuser";
+import { getErrorMessage } from "../../../../utils/errorMessage";
+import { chat } from "../../../../utils/types";
+import AlertMessage, { alert } from "../../../alert";
 
 const Schema = z.object({
   name: z
@@ -44,6 +43,7 @@ const ChatRoomChatAddChat = () => {
     console.log({ data });
     mutate(data, {
       onSuccess: (data) => {
+        console.log({data})
         setAlert({ message: "Send message success", type: "success" });
         dispatch(
           handleSetAlertMessage({
@@ -75,6 +75,7 @@ const ChatRoomChatAddChat = () => {
               placeholder="Name"
               className="w-full py-1 border ps-2"
             />
+            {errors.name && <span>{errors.name.message}</span>}
           </label>
 
           <label htmlFor="" className="w-full">
