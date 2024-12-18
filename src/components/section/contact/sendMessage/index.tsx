@@ -1,11 +1,20 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { useMutation } from "react-query";
+import { useDispatch, useSelector } from "react-redux";
 import { z } from "zod";
 import LayoutSections from "../../../../layouts/LayoutSections";
+import {
+  handleClearAlertMessage,
+  handleSetAlertMessage,
+} from "../../../../redux/slices/alert";
+import { AppDispatch, RootState } from "../../../../redux/store";
+import { getErrorMessage } from "../../../../utils/errorMessage";
 import { ServiceCretaeFeedbacks } from "../../../../utils/feedbacks";
 import { feedback } from "../../../../utils/types";
+import AlertMessage from "../../../alert";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const Schema = z.object({
   name: z.string().min(3, "Name min 3 character"),
@@ -16,7 +25,12 @@ const Schema = z.object({
 type sendMessageSchema = z.infer<typeof Schema>;
 
 const ContactSendMessage = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(false)
+  const dispatch = useDispatch<AppDispatch>();
+  const { active, message, type } = useSelector(
+    (state: RootState) => state.alertMessage
+  );
+  const [loading, setLoading] = useState<boolean>(false);
+
   const {
     register,
     formState: { errors },
@@ -24,29 +38,54 @@ const ContactSendMessage = () => {
   } = useForm<sendMessageSchema>({
     resolver: zodResolver(Schema),
   });
-  
-  const {mutate} = useMutation({
+
+  const { mutate } = useMutation({
     mutationKey: ["createFeedback"],
-    mutationFn: (data: feedback) => ServiceCretaeFeedbacks(data)
-  })
-  
+    mutationFn: (data: feedback) => ServiceCretaeFeedbacks(data),
+  });
+
   const handleSubmitForm = handleSubmit((data: feedback) => {
-    setIsLoading(true)
+    setLoading(true);
     mutate(data, {
       onSuccess: () => {
-        setIsLoading(false)
-        console.log("success")
+        setLoading(false);
+        dispatch(
+          handleSetAlertMessage({
+            active: true,
+            message: "Send message success",
+            transition: true,
+            type: "success",
+          })
+        );
       },
       onError: (err) => {
-        setIsLoading(false)
-        console.log(err)
-      }
-    })
+        setLoading(false);
+        dispatch(
+          handleSetAlertMessage({
+            active: true,
+            message: getErrorMessage(err),
+            type: "error",
+            transition: true,
+          })
+        );
+      },
+    });
   });
-  
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (!loading) {
+        dispatch(handleClearAlertMessage());
+      }
+    }, 2000);
+  }, [loading, dispatch]);
 
   return (
-    <LayoutSections styleSection="pt-5 pb-10" title="I'm open to opportunities—feel free to connect with me!">
+    <LayoutSections
+      styleSection="pt-5 pb-10"
+      title="I'm open to opportunities—feel free to connect with me!"
+    >
+      {active && <AlertMessage message={message} type={type} />}
       <form onSubmit={handleSubmitForm}>
         <div className="grid w-full gap-3 mb-4 lg:grid-cols-2">
           <label htmlFor="" className="flex flex-col ">
@@ -90,8 +129,21 @@ const ContactSendMessage = () => {
           )}
         </div>
 
-        <button disabled={isLoading} className="w-full p-2 text-sm text-center text-white rounded-lg bg-dev-black-gray">
-          {isLoading ? "Loading..." : "Send Email"}
+        <button
+          disabled={loading}
+          className={`${
+            loading
+              ? "bg-dev-black-gray/40 flex items-center justify-center cursor-progress"
+              : "bg-dev-black-gray"
+          } w-full p-2 text-sm text-center text-white rounded-lg `}
+        >
+          {loading ? (
+            <span className="animate-spin">
+              <AiOutlineLoading3Quarters />
+            </span>
+          ) : (
+            <span>Send</span>
+          )}
         </button>
       </form>
     </LayoutSections>

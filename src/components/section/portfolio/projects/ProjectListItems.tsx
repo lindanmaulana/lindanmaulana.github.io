@@ -1,12 +1,13 @@
-import { Link } from "react-router-dom";
-import { dataProject, project } from "./types";
-import { useSelector } from "react-redux";
-import { RootState } from "../../../../redux/store";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { RootState } from "../../../../redux/store";
+import { dataProject, project } from "./types";
 
 const ProjectListItems = () => {
   const { key, tech } = useSelector((state: RootState) => state.portfolio);
   const [project, setProject] = useState<project[] | undefined>(undefined);
+
   useEffect(() => {
     const filterData = () => {
       if (key && !tech) {
@@ -16,17 +17,16 @@ const ProjectListItems = () => {
 
         setProject(data);
       } else if (!key && tech) {
-        const data = dataProject.map((payload) => {
-          const filter = payload.tech.filter(
-            (field) => field.name.toLowerCase() === tech
+        const data = dataProject.filter((item) => {
+          return item.tech.some(
+            (techItem) => techItem.name.toLowerCase() === tech
           );
-
-          console.log({ filter });
         });
 
-        console.log({ data });
+        setProject(data);
       } else if (key && tech) {
         console.log("ketiga");
+        setProject(dataProject);
       } else {
         setProject(dataProject);
       }
@@ -34,6 +34,12 @@ const ProjectListItems = () => {
 
     filterData();
   }, [key, tech]);
+
+
+  useEffect(() => {
+    if(tech === "") setProject(dataProject)
+  }, [tech])
+  
   return (
     <>
       {project?.map((project) => (

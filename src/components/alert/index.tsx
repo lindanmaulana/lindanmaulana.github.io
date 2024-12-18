@@ -18,11 +18,11 @@ const AlertMessage = (props: alert) => {
         dispatch(handleClearAlertMessage())
     }
   return (
-    <div className={`flex items-center justify-between ${type === "error" ? "bg-red-500" : "bg-blue-500"} rounded px-4 py-3`}>
+    <div className={`flex fixed z-10 top-5 right-1/2 gap-5 w-[70%] lg:max-w-[30%] translate-x-1/2 items-center justify-between ${type === "error" ? "bg-red-500" : "bg-blue-500"} rounded px-4 py-3`}>
       <h3 className="flex items-center gap-2">
         {" "}
         {type === "error" ? <PiWarningCircleFill className="text-white" /> : <IoIosCheckmarkCircle className="text-white" />}
-        <span>{message}</span>
+        <span className="text-white">{message}</span>
       </h3>
       <button onClick={handleAlert} className="text-white">
         <MdOutlineClear />

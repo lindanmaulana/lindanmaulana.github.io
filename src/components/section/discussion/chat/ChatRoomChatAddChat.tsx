@@ -1,6 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useMutation, useQueryClient } from "react-query";
 import { useDispatch, useSelector } from "react-redux";
 import { z } from "zod";
@@ -9,7 +10,7 @@ import { AppDispatch, RootState } from "../../../../redux/store";
 import { ServiceCreateChat } from "../../../../utils/chatroomuser";
 import { getErrorMessage } from "../../../../utils/errorMessage";
 import { chat } from "../../../../utils/types";
-import AlertMessage, { alert } from "../../../alert";
+import AlertMessage from "../../../alert";
 
 const Schema = z.object({
   name: z
@@ -23,8 +24,8 @@ type chatRoomSchema = z.infer<typeof Schema>;
 const ChatRoomChatAddChat = () => {
   const queryClient = useQueryClient();
   const dispatch = useDispatch<AppDispatch>();
-  const { active } = useSelector((state: RootState) => state.alertMessage);
-  const [alert, setAlert] = useState<alert>({ message: "", type: "error" });
+  const { active, message, type } = useSelector((state: RootState) => state.alertMessage);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const {
     handleSubmit,
@@ -40,30 +41,39 @@ const ChatRoomChatAddChat = () => {
   });
 
   const handleForm = handleSubmit((data: chat) => {
-    console.log({ data });
+    setLoading(true);
     mutate(data, {
       onSuccess: (data) => {
-        console.log({data})
-        setAlert({ message: "Send message success", type: "success" });
+        console.log({ data });
+
+        setLoading(false);
         dispatch(
           handleSetAlertMessage({
             active: true,
             transition: true,
-            type: alert.type,
-            message: alert.message,
+            type: "success",
+            message: "Data added success",
           })
         );
         queryClient.invalidateQueries("getAllChat");
       },
       onError: (err) => {
-        setAlert({ message: getErrorMessage(err), type: "error" });
+        setLoading(false);
+        dispatch(
+          handleSetAlertMessage({
+            active: true,
+            message: getErrorMessage(err),
+            type: "error",
+            transition: true,
+          })
+        );
       },
     });
   });
   return (
     <>
       {active ? (
-        <AlertMessage message={alert.message} type={alert.type} />
+        <AlertMessage message={message} type={type} />
       ) : null}
       <form onSubmit={handleForm} className="p-4 rounded shadow-md w-[400px]">
         <h2 className="mb-2 text-sm">Send Message</h2>
@@ -75,7 +85,7 @@ const ChatRoomChatAddChat = () => {
               placeholder="Name"
               className="w-full py-1 border ps-2"
             />
-            {errors.name && <span>{errors.name.message}</span>}
+            {errors.name && <span className="text-xs text-red-500">{errors.name.message}</span>}
           </label>
 
           <label htmlFor="" className="w-full">
@@ -84,9 +94,21 @@ const ChatRoomChatAddChat = () => {
               placeholder="type message here"
               className="w-full py-1 border ps-2"
             />
+            {errors.chat && <span className="text-xs text-red-500">{errors.chat.message}</span>}
           </label>
-          <button className="w-full px-2 py-px text-sm text-white bg-red-600">
-            Send
+          <button
+            disabled={loading}
+            className={`${
+              loading ? "bg-red-400 cursor-progress" : "bg-red-600"
+            } flex items-center justify-center w-full px-2 py-1 text-sm text-white  h-7`}
+          >
+            {loading ? (
+              <span className="animate-spin">
+                <AiOutlineLoading3Quarters />
+              </span>
+            ) : (
+              <span>Send</span>
+            )}
           </button>
         </div>
       </form>
