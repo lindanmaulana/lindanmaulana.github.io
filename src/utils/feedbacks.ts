@@ -8,7 +8,11 @@ export const ServiceGetFeedbacks = async () => {
 
         return result.data
     } catch (err) {
-        console.log(err)
+        if(err instanceof AxiosError && err.response?.data) {
+            throw new Error(err.response.data.msg)
+        } else {
+            throw new Error("unexpected error")
+        }
     }
 }
 
