@@ -6,7 +6,7 @@ import AboutProfesionalGoals from "./professionalGoals";
 
 const AboutMe = () => {
   return (
-    <section className="lg:p-10 ">
+    <section className="pt-4 lg:p-10">
       <div className="container max-w-3xl px-4 lg:px-0 ">
         <div className="px-4">
           <Typewriter

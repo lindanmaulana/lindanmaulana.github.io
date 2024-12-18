@@ -13,6 +13,7 @@ import PageContact from "./pages/contact/index.tsx";
 import { QueryClient, QueryClientProvider } from "react-query";
 import PageChatRoom from "./pages/discussion/index.tsx";
 import 'react-loading-skeleton/dist/skeleton.css'
+import PageDashboard from "./pages/dashboard/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
       {
         path: "discussion",
         element: <PageChatRoom />
+      },
+      {
+        path: "dashboard",
+        element: <PageDashboard />
       }
     ],
   },

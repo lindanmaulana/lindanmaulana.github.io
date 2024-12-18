@@ -3,6 +3,7 @@ import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { BiLeaf } from "react-icons/bi";
 import { GoCommentDiscussion } from "react-icons/go";
 import { GrSend } from "react-icons/gr";
+import { MdOutlineDashboard } from "react-icons/md";
 import { RiHome9Line } from "react-icons/ri";
 
 export interface navbar {
@@ -42,5 +43,11 @@ export const dataNavar: navbar[] = [
     title: "Discussion",
     icon: GoCommentDiscussion,
     to: "/discussion"
-  }
+  },
+  {
+    id: 6,
+    title: "Dashboard",
+    icon: MdOutlineDashboard,
+    to: "/dashboard"
+  },
 ];

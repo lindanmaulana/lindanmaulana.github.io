@@ -3,7 +3,7 @@ import Title from "../../../title/Title";
 
 const PortfolioBanner = () => {
   return (
-    <section className="pb-5 lg:pt-16">
+    <section className="pt-4 pb-5 lg:pt-16">
       <div className="container max-w-3xl px-4 lg:px-0">
         <Typewriter
           words={["Nice to meet you!", "Welcome to My Portfolio"]}

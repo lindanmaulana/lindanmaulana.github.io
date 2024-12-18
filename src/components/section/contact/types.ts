@@ -26,7 +26,7 @@ export const dataFindme: findme[] = [
         id: 2,
         title: "Let's connect",
         subtitle: "Connect for collaboration or explore my professional experience.",
-        url: "www.linkedin.com/in/lindan-maulana-ab86aa300",
+        url: "https://www.linkedin.com/in/lindan-maulana-ab86aa300/",
         icon: FaLinkedin,
         color: "#2563EB",
         titleButton: "Go to Linkedin"

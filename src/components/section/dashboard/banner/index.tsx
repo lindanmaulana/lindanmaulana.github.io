@@ -1,7 +1,7 @@
 import { Typewriter } from "react-simple-typewriter";
 import Title from "../../../title/Title";
 
-const ContactBanner = () => {
+const DashboardBanner = () => {
   return (
     <section className="pt-4 pb-5 lg:pt-16">
       <div className="container max-w-3xl px-4 lg:px-0">
@@ -17,8 +17,8 @@ const ContactBanner = () => {
         <div>
           <Title
             style="border-b border-dashed border-dev-black-gray pb-4"
-            title="Contact"
-            subtitle="Let`s get in touch"
+            title="Dashboard"
+            subtitle="This is my personal dashboard, built with React, API routes deployed as serverless functions."
           />
         </div>
       </div>
@@ -26,4 +26,4 @@ const ContactBanner = () => {
   );
 };
 
-export default ContactBanner;
+export default DashboardBanner;
