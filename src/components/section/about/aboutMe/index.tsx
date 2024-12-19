@@ -8,7 +8,7 @@ const AboutAboutMe = () => {
       subTitle="A short story of me"
       icons={<BsPersonVideo3 />}
     >
-      <div className="text-sm text-dev-black ">
+      <div className="text-sm text-dev-black dark:text-white ">
         <p className="text-sm leading-normal">
           Saya seorang pengembang frontend yang berspesialisasi dalam membangun
           aplikasi web yang dinamis dan responsif menggunakan React JS dan

@@ -14,7 +14,7 @@ export const ImageHome = {
 };
 
 import gifUser from "./user.gif"
-import gifWebDevelopment from "./web-development.webp"
+import gifWebDevelopment from "./web-development.gif"
 import gifSlicingUi from "./slicing-ui.gif"
 import gifBackendDevelopment from "./backend-development.gif"
 

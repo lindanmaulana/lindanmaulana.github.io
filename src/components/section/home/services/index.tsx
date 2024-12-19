@@ -5,6 +5,7 @@ const HomeServices = () => {
   return (
     <LayoutSections
       styleSection="py-5 dark:bg-dev-black"
+      styleContainer="overflow-hidden"
       icons={<FaServicestack />}
       title="Services"
       subTitle="I can deliver the following services"

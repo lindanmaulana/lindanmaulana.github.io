@@ -6,6 +6,7 @@ export interface service {
   image: string;
   title: string;
   desc: string;
+  durationAos: number;
 }
 
 export const dataService: service[] = [
@@ -14,6 +15,7 @@ export const dataService: service[] = [
     image: ImageGif.gifWebDevelopment,
     title: "Frontend Development",
     type: "coding",
+    durationAos: 2000,
     desc: "Specializing in creating modern, responsive web designs using cutting-edge frontend technologies like React, Tailwind CSS, and JavaScript.",
   },
   {
@@ -21,6 +23,7 @@ export const dataService: service[] = [
     image: ImageGif.gifSlicingUi,
     title: "Slicing UI to Code",
     type: "coding",
+    durationAos: 1600,
     desc: "Specializing in creating modern, responsive web designs using cutting-edge frontend technologies like React, Tailwind CSS, and JavaScript.",
   },
   {
@@ -28,6 +31,7 @@ export const dataService: service[] = [
     image: ImageGif.gifBackendDevelopment,
     title: "Backend NodeJs, ExpressJs",
     type: "coding",
+    durationAos: 1200,
     desc: "Create simple and effective server-side systems using Node.js and Express.js, perfect for small to medium-scale applications.",
   },
 ];

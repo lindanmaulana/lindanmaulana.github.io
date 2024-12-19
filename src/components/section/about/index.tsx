@@ -6,9 +6,9 @@ import AboutProfesionalGoals from "./professionalGoals";
 
 const AboutMe = () => {
   return (
-    <section className="pt-4 lg:p-10">
+    <section className="pt-4 bg-white lg:p-10 dark:bg-dev-black">
       <div className="container max-w-3xl px-4 lg:px-0 ">
-        <div className="px-4">
+        <div className="px-4 lg:px-0 dark:text-white text-dev-black">
           <Typewriter
             words={["Nice to meet you!", "Welcome to My Bio"]}
             loop={true}
