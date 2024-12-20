@@ -17,7 +17,7 @@ export const ServiceGetFeedbacks = async () => {
 }
 
 
-export const ServiceCretaeFeedbacks = async (data: feedback) => {
+export const ServiceCreateFeedbacks = async (data: feedback) => {
     try {
         const result = await axios.post(`${BASEURL}/feedback`, data)
 

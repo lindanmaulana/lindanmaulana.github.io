@@ -31,6 +31,7 @@ const ChatRoomChatAddChat = () => {
     handleSubmit,
     register,
     formState: { errors },
+    reset
   } = useForm<chatRoomSchema>({
     resolver: zodResolver(Schema),
   });
@@ -43,9 +44,8 @@ const ChatRoomChatAddChat = () => {
   const handleForm = handleSubmit((data: chat) => {
     setLoading(true);
     mutate(data, {
-      onSuccess: (data) => {
-        console.log({ data });
-
+      onSuccess: () => {
+        reset()
         setLoading(false);
         dispatch(
           handleSetAlertMessage({

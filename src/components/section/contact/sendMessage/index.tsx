@@ -1,6 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import { useMutation } from "react-query";
 import { useDispatch, useSelector } from "react-redux";
 import { z } from "zod";
@@ -11,10 +12,9 @@ import {
 } from "../../../../redux/slices/alert";
 import { AppDispatch, RootState } from "../../../../redux/store";
 import { getErrorMessage } from "../../../../utils/errorMessage";
-import { ServiceCretaeFeedbacks } from "../../../../utils/feedbacks";
+import { ServiceCreateFeedbacks } from "../../../../utils/feedbacks";
 import { feedback } from "../../../../utils/types";
 import AlertMessage from "../../../alert";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 const Schema = z.object({
   name: z.string().min(3, "Name min 3 character"),
@@ -35,13 +35,14 @@ const ContactSendMessage = () => {
     register,
     formState: { errors },
     handleSubmit,
+    reset,
   } = useForm<sendMessageSchema>({
     resolver: zodResolver(Schema),
   });
 
   const { mutate } = useMutation({
     mutationKey: ["createFeedback"],
-    mutationFn: (data: feedback) => ServiceCretaeFeedbacks(data),
+    mutationFn: (data: feedback) => ServiceCreateFeedbacks(data),
   });
 
   const handleSubmitForm = handleSubmit((data: feedback) => {
@@ -57,6 +58,7 @@ const ContactSendMessage = () => {
             type: "success",
           })
         );
+        reset();
       },
       onError: (err) => {
         setLoading(false);
