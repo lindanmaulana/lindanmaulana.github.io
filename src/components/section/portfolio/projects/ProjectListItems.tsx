@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { RootState } from "../../../../redux/store";
-import { dataProject, project } from "./types";
+import { dataProject, project } from "../types";
 
 const ProjectListItems = () => {
   const { key, tech } = useSelector((state: RootState) => state.portfolio);
@@ -35,11 +35,10 @@ const ProjectListItems = () => {
     filterData();
   }, [key, tech]);
 
-
   useEffect(() => {
-    if(tech === "") setProject(dataProject)
-  }, [tech])
-  
+    if (tech === "") setProject(dataProject);
+  }, [tech]);
+
   return (
     <>
       {project?.map((project) => (

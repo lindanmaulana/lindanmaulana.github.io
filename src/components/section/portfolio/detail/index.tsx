@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import LayoutSections from "../../../../layouts/LayoutSections";
 import { IoArrowBackCircleOutline } from "react-icons/io5";
-import { project } from "../projects/types";
+import { project } from "../types";
 import { PiMonitorPlay } from "react-icons/pi";
 
 const PortfolioDetail = (props: { data: project }) => {

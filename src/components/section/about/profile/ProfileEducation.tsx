@@ -1,10 +1,14 @@
 import { PiStudent } from "react-icons/pi";
 import Title from "../../../title/Title";
 
-const AboutPersonEducation = () => {
+const ProfileEducation = () => {
   return (
     <div className="flex flex-col w-full gap-4">
-      <Title icons={<PiStudent />} title="Education" subtitle="Educational Background" />
+      <Title
+        icons={<PiStudent />}
+        title="Education"
+        subtitle="Educational Background"
+      />
       <ul className="flex flex-col items-center gap-4 lg:flex-row">
         <li className="flex flex-col w-full gap-1 p-4 border rounded-lg border-dev-black/20 ">
           <h5 className="text-xs font-montserrat-light">2023 - present</h5>
@@ -18,9 +22,7 @@ const AboutPersonEducation = () => {
           <h5 className="text-xs font-montserrat-light">2019 - 2023</h5>
           <h5 className="text-xs font-bold">
             SMKN 3 KUNINGAN -{" "}
-            <span className="font-thin">
-              Teknik Otomasi Industri
-            </span>
+            <span className="font-thin">Teknik Otomasi Industri</span>
           </h5>
           <h5 className="text-xs">Kuningan</h5>
         </li>
@@ -29,4 +31,4 @@ const AboutPersonEducation = () => {
   );
 };
 
-export default AboutPersonEducation;
+export default ProfileEducation;

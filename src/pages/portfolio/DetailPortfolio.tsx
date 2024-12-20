@@ -1,30 +1,32 @@
-import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
-import PortfolioDetail from "../../components/section/portfolio/detail"
-import { dataProject, project } from "../../components/section/portfolio/projects/types"
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import PortfolioDetail from "../../components/section/portfolio/detail";
+import { dataProject, project } from "../../components/section/portfolio/types";
 
 const PageDetailPortfolio = () => {
-    const {name} = useParams()
-    const [dataDetailPortfolio, setDataDetailPortfolio] = useState<(project | undefined)>(undefined)
+  const { name } = useParams();
+  const [dataDetailPortfolio, setDataDetailPortfolio] = useState<
+    project | undefined
+  >(undefined);
 
-    useEffect(() => {
-        const fetchData = () => {
-            const project =  dataProject?.find((data) => data.title === name)
+  useEffect(() => {
+    const fetchData = () => {
+      const project = dataProject?.find((data) => data.title === name);
 
-            setDataDetailPortfolio(project)
-        }
+      setDataDetailPortfolio(project);
+    };
 
-        fetchData()
-    }, [name])
+    fetchData();
+  }, [name]);
 
-    if(!dataDetailPortfolio) return <h2>Loading...</h2>
+  if (!dataDetailPortfolio) return <h2>Loading...</h2>;
 
-    console.log({dataDetailPortfolio})
+  console.log({ dataDetailPortfolio });
   return (
     <>
       <PortfolioDetail data={dataDetailPortfolio} />
     </>
-  )
-}
+  );
+};
 
-export default PageDetailPortfolio
+export default PageDetailPortfolio;

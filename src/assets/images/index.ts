@@ -4,6 +4,10 @@ import homeIcon2 from "./home-icon-2.png";
 import meTtd from "./me-ttd.png";
 import github from "./github.png"
 
+import lindanmaulana from "./lindanmaulana.jpg"
+export const ImageIndex = {
+  lindanmaulana
+}
 
 export const ImageHome = {
   me,
