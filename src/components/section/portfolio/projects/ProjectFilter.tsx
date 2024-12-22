@@ -23,7 +23,7 @@ const ProjectFilter = () => {
 
   return (
     <div className="flex items-center justify-end gap-1">
-      <div className="flex items-center gap-1 overflow-x-auto ">
+      <div className="flex items-center gap-1 overflow-x-auto no-scrollbar">
         <button
           onClick={() => handleTech(1, "html")}
           className={`${

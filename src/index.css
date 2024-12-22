@@ -3,10 +3,20 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+  }
+  
+  body::-webkit-scrollbar {
+    display: none; 
+  }
+
   body {
     @apply font-Geist;
   }
 
+  
   @font-face {
     font-family: "Geist";
     src: url("./assets/fonts/geist/Geist-ExtraBold.woff2") format("woff2"),
