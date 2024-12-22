@@ -2,6 +2,7 @@ import { IconType } from "react-icons";
 import { FaCss3Alt, FaHtml5, FaReact } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiChakraui, SiExpress, SiMongodb, SiTypescript } from "react-icons/si";
+import { ImageProjects } from "../../../assets/images/projects";
 
 export type techStack = string;
 export const dataTechStack: techStack[] = [""];
@@ -26,7 +27,7 @@ export const dataProject: project[] = [
   {
     id: 1,
     title: "Web Design Conference",
-    image: "https://i.imgur.com/eq9hEW9.png",
+    image: ImageProjects.webDesign,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {
@@ -43,7 +44,7 @@ export const dataProject: project[] = [
   {
     id: 2,
     title: "Rumah Impian",
-    image: "https://i.imgur.com/A1lsucB.png",
+    image: ImageProjects.rumahImpian,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {
@@ -60,7 +61,7 @@ export const dataProject: project[] = [
   {
     id: 3,
     title: "Route X",
-    image: "https://i.imgur.com/cS4Vb0D.png",
+    image: ImageProjects.visaEasy,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {
@@ -77,7 +78,7 @@ export const dataProject: project[] = [
   {
     id: 4,
     title: "Linm Store",
-    image: "https://i.imgur.com/uOq7YL8.png",
+    image: ImageProjects.linmStore,
     tech: [
       { icon: FaHtml5, name: "Html", color: "color-html" },
       {
@@ -94,7 +95,7 @@ export const dataProject: project[] = [
   {
     id: 5,
     title: "DNK",
-    image: "https://i.imgur.com/TDZZb2H.png",
+    image: ImageProjects.dnk,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {
@@ -111,7 +112,7 @@ export const dataProject: project[] = [
   {
     id: 6,
     title: "General Muncangela",
-    image: "https://i.imgur.com/fEMvBiy.png",
+    image: ImageProjects.generalAlhidayah,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {
@@ -128,7 +129,7 @@ export const dataProject: project[] = [
   {
     id: 7,
     title: "Event Semina BWA",
-    image: "https://i.imgur.com/hP2vWsG.png",
+    image: ImageProjects.eventSemina,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {
@@ -145,7 +146,7 @@ export const dataProject: project[] = [
   {
     id: 8,
     title: "Weserve web hosting",
-    image: "https://i.imgur.com/KgQUsKr.png",
+    image: ImageProjects.weserveWebHosting,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {
@@ -163,7 +164,7 @@ export const dataProject: project[] = [
   {
     id: 9,
     title: "Nidejia Website",
-    image: "https://i.imgur.com/y40G6sR.png",
+    image: ImageProjects.nidejia,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {
@@ -180,7 +181,7 @@ export const dataProject: project[] = [
   {
     id: 10,
     title: "Bennar FInance",
-    image: "https://i.imgur.com/EwsVvek.png",
+    image: ImageProjects.bennarFinance,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {
@@ -197,7 +198,7 @@ export const dataProject: project[] = [
   {
     id: 11,
     title: "Yesplis Copy",
-    image: "https://i.imgur.com/ula6Xj7.png",
+    image: ImageProjects.yesplisCopy,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {
@@ -215,7 +216,7 @@ export const dataProject: project[] = [
   {
     id: 12,
     title: "Lemon Wares",
-    image: "https://i.imgur.com/pgY52qf.png",
+    image: ImageProjects.lemonWares,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {
@@ -233,7 +234,7 @@ export const dataProject: project[] = [
   {
     id: 13,
     title: "LinmID Tech",
-    image: "https://i.imgur.com/TeYzu9O.png",
+    image: ImageProjects.linmIdTech,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {
@@ -251,7 +252,7 @@ export const dataProject: project[] = [
   {
     id: 14,
     title: "Kopi Array",
-    image: "https://imgur.com/n4LM9Ip.png",
+    image: ImageProjects.kopiArray,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {
@@ -271,7 +272,7 @@ export const dataProject: project[] = [
   {
     id: 15,
     title: "Simple Absensi TIFC-01-2023",
-    image: "https://imgur.com/skvPP3T.png",
+    image: ImageProjects.simpleAbsensi,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {
@@ -291,7 +292,7 @@ export const dataProject: project[] = [
   {
     id: 16,
     title: "Simple ATM",
-    image: "https://imgur.com/hH2Tm5X.png",
+    image: ImageProjects.linmPay,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {
@@ -311,7 +312,7 @@ export const dataProject: project[] = [
   {
     id: 17,
     title: "Learning Courses",
-    image: "https://imgur.com/nX6WtLo.png",
+    image: ImageProjects.learningCourse,
     tech: [
       { icon: FaHtml5, name: "Html", color: "color-html" },
       {
@@ -328,7 +329,7 @@ export const dataProject: project[] = [
   {
     id: 18,
     title: "Trafalgar",
-    image: "https://imgur.com/jUm5dqn.png",
+    image: ImageProjects.trafalgar,
     tech: [
       { icon: FaHtml5, name: "Html", color: "color-html" },
       {
@@ -345,7 +346,7 @@ export const dataProject: project[] = [
   {
     id: 19,
     title: "Portfolio",
-    image: "https://imgur.com/nbIhQ3n.png",
+    image: ImageProjects.portfolioLindanPertama,
     tech: [
       { icon: FaHtml5, name: "Html", color: "color-html" },
       {
@@ -362,7 +363,7 @@ export const dataProject: project[] = [
   {
     id: 20,
     title: "Site Masa Depanku, Pilihan Bersama",
-    image: "https://imgur.com/GuuayfZ.png",
+    image: ImageProjects.siteMasaDepanku,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {
@@ -379,7 +380,7 @@ export const dataProject: project[] = [
   {
     id: 21,
     title: "Cek Resi Pesanan Online",
-    image: "https://imgur.com/hOvcv2q.png",
+    image: ImageProjects.linmCekResi,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {
@@ -395,7 +396,7 @@ export const dataProject: project[] = [
   {
     id: 22,
     title: "Alquran Indonesia",
-    image: "https://imgur.com/CAHVBL4.png",
+    image: ImageProjects.alquranIndo,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {
@@ -412,7 +413,7 @@ export const dataProject: project[] = [
   {
     id: 23,
     title: "Portfolio",
-    image: "https://imgur.com/eI3Ak5P.png",
+    image: ImageProjects.portfolioLindanKedua,
     tech: [
       { icon: FaReact, name: "ReactJs", color: "color-react" },
       {

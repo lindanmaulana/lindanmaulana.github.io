@@ -1,3 +1,5 @@
+import { transform } from 'typescript';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: "class",
@@ -39,6 +41,13 @@ export default {
       scrollbarWidth: {
         none: "none",
       },
+
+      keyframes: {
+        slideToL: {
+          "0%": {transform: "translateX(0%)"},
+          "100%": {transform: "translateX(100%)"}
+        }
+      }
     },
   },
   plugins: [],
