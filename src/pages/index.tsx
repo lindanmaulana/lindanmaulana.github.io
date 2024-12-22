@@ -8,7 +8,7 @@ const Pages = () => {
   const { darkMode } = useSelector((state: RootState) => state.theme);
 
   return (
-    <div className={`${darkMode ? "dark" : ""} no-scrollbar`}>
+    <div className={`${darkMode ? "dark" : ""}`}>
       <Navbar />
       <NavMobile />
       <main>
