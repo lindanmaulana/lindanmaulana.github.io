@@ -6,7 +6,7 @@ const ProfileSkills = () => {
   return (
     <div className="flex flex-col gap-4">
       <Title title="Skills" subtitle="My coding skills" icons={<RxCode />} />
-      <div className="flex items-center gap-6 overflow-x-auto lg:flex-wrap lg:overflow-none">
+      <div className="flex items-center gap-6 overflow-x-auto lg:flex-wrap">
         {dataSkills?.map((skil, index) => (
           <div
             key={index}

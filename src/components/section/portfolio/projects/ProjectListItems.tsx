@@ -1,47 +1,40 @@
-import { useEffect, useState } from "react";
+import { useMemo, useState } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { RootState } from "../../../../redux/store";
-import { dataProject, project } from "../types";
+import { dataProject } from "../types";
 
 const ProjectListItems = () => {
   const { key, tech } = useSelector((state: RootState) => state.portfolio);
-  const [project, setProject] = useState<project[] | undefined>(undefined);
+  const [showAll, setShowAll] = useState<boolean>(false);
 
-  useEffect(() => {
-    const filterData = () => {
-      if (key && !tech) {
-        const data = dataProject.filter((payload) => {
-          return payload.type === key;
-        });
-
-        setProject(data);
-      } else if (!key && tech) {
-        const data = dataProject.filter((item) => {
-          return item.tech.some(
-            (techItem) => techItem.name.toLowerCase() === tech
-          );
-        });
-
-        setProject(data);
-      } else if (key && tech) {
-        console.log("ketiga");
-        setProject(dataProject);
-      } else {
-        setProject(dataProject);
-      }
-    };
-
-    filterData();
+  const filterDataProject = useMemo(() => {
+    if (key && !tech) {
+      return dataProject.filter((payload) => {
+        return payload.type === key;
+      });
+    } else if (!key && tech) {
+      return dataProject.filter((item) => {
+        return item.tech.some(
+          (techItem) => techItem.name.toLowerCase() === tech
+        );
+      });
+    } else if (key && tech) {
+      return dataProject;
+    } else {
+      return dataProject;
+    }
   }, [key, tech]);
 
-  useEffect(() => {
-    if (tech === "") setProject(dataProject);
-  }, [tech]);
+  const renderDataProject = useMemo(() => {
+    const filtered = tech === "" ? dataProject : filterDataProject;
+
+    return showAll ? filtered : filterDataProject.slice(0, 8);
+  }, [filterDataProject, showAll, tech]);
 
   return (
     <>
-      {project?.map((project) => (
+      {renderDataProject?.map((project) => (
         <Link
           to={`/portfolio/${project.title}`}
           key={project.id}
@@ -72,6 +65,13 @@ const ProjectListItems = () => {
           </div>
         </Link>
       ))}
+
+      <button
+        onClick={() => setShowAll(!showAll)}
+        className="absolute bottom-0 px-2 py-1 text-sm text-white translate-x-1/2 rounded-md right-1/2 bg-dev-blue/70"
+      >
+        {showAll ? "Read Less" : "Read More"}
+      </button>
     </>
   );
 };
