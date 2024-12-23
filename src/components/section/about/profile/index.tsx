@@ -4,7 +4,7 @@ import ProfileSkills from "./ProfileSkills";
 
 const AboutProfile = () => {
   return (
-    <section className="py-5">
+    <section className="py-5 dark:bg-black">
       <div className="container max-w-3xl px-4 lg:px-0">
         <div className="flex flex-col gap-10 lg:flex-row">
           <ProfilePicture />
