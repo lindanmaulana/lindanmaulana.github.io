@@ -1,19 +1,26 @@
+import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { hanldeNavbarMobile } from "../../redux/slices/navbar";
+import { AppDispatch, RootState } from "../../redux/store";
 import { dataNavar } from "./types";
-import { useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
 
 const NavbarList = () => {
   const { sidebar, navbar } = useSelector((state: RootState) => state.navbar);
+  const dispatch = useDispatch<AppDispatch>()
+  
+  const handleHideNavbar = () => {
+    dispatch(hanldeNavbarMobile())
+  }
   return (
     <>
       {dataNavar?.map((nav) => (
         <NavLink
           key={nav.id}
           to={nav.to}
+          onClick={handleHideNavbar}
           className={({ isActive }) =>
             isActive
-              ? `bg-black/5 text-dev-black rounded-full dark:text-white dark:bg-dev-black ${
+              ? ` text-dev-black rounded-full dark:text-white dark:bg-white/10 bg-dev-black/10 ${
                   sidebar || navbar ? "justify-start ps-4" : "justify-center"
                 }  flex items-center gap-2 w-full py-2 rounded-s-sm text-sm`
               : `flex text-base text-dev-black-gray dark:text-white items-center gap-2 ${

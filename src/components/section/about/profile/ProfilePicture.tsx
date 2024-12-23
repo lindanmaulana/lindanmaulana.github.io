@@ -18,7 +18,7 @@ const ProfilePicture = () => {
       <h3 className="text-3xl text-transparent font-montserrat-bold bg-gradient-to-r from-dev-blue to-dev-blue-dark bg-clip-text">
         Lindan Maulana
       </h3>
-      <div className="flex items-center gap-px mb-2">
+      <div className="flex items-center gap-px mb-2 dark:text-white/70">
         <h5 className="text-sm">Student,</h5>
         <h5 className="text-sm">Frontend Developer</h5>
       </div>

@@ -3,7 +3,7 @@ import { Typewriter } from "react-simple-typewriter";
 
 const HomeBanner = () => {
   return (
-    <section className="pt-6 pb-5 lg:pt-16 dark:bg-dev-black">
+    <section className="pt-6 pb-5 lg:pt-16 dark:bg-black">
       <div className="container max-w-3xl px-4 lg:px-0">
         <div>
           <div className="flex flex-col gap-4">

@@ -13,7 +13,7 @@ const LayoutSections = (props: LayoutSectionsProps) => {
   const { subTitle, title, icons, children, styleContainer, styleSection } =
     props;
   return (
-    <section className={styleSection}>
+    <section className={`${styleSection} dark:bg-black`}>
       <div className={`container max-w-3xl px-4 lg:px-0 relative ${styleContainer}`}>
         <div className="flex flex-col gap-4">
           <Title icons={icons} title={title} subtitle={subTitle} />

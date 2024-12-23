@@ -4,7 +4,7 @@ import { BsPersonVideo3 } from "react-icons/bs";
 
 const AboutBanner = () => {
   return (
-    <section className="pt-4 bg-white lg:p-10 dark:bg-dev-black">
+    <section className="pt-4 bg-white lg:p-10 dark:bg-black">
       <div className="container max-w-3xl px-4 lg:px-0 ">
         <div className=" dark:text-white text-dev-black">
           <Typewriter
