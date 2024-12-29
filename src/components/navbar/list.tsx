@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { hanldeNavbarMobile } from "../../redux/slices/navbar";
+import { handleOutSideBar, hanldeNavbarMobile } from "../../redux/slices/navbar";
 import { AppDispatch, RootState } from "../../redux/store";
 import { dataNavar } from "./types";
 

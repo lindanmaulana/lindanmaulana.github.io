@@ -23,7 +23,7 @@ const FeaturesNavbar = createSlice({
         },
 
         hanldeNavbarMobile: (state) => {
-            state.navbar = !state.navbar
+            state.navbar = false
         }
     }
 })
