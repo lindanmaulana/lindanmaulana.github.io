@@ -22,10 +22,13 @@ const FeaturesNavbar = createSlice({
             state.sidebar = false
         },
 
-        hanldeNavbarMobile: (state) => {
+        handleNavbarMobile: (state) => {
+            state.navbar = !state.navbar
+        },
+        handleCloseNavbarMobile: (state) => {
             state.navbar = false
         }
     }
 })
-export const {handleSidebar, handleOutSideBar, hanldeNavbarMobile} = FeaturesNavbar.actions
+export const {handleSidebar, handleOutSideBar, handleNavbarMobile, handleCloseNavbarMobile} = FeaturesNavbar.actions
 export default FeaturesNavbar.reducer

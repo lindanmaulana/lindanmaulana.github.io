@@ -30,7 +30,7 @@ const Navbar = () => {
       onMouseLeave={handleOutBar}
       className={`flex-col bg-white dark:bg-black hidden lg:flex shadow-lg shadow-dev-black/50 dark:shadow-white/40 h-screen z-50 fixed justify-start text-white left-0 top-0  ${
         sidebar ? "w-[200px] px-4" : "w-[50px] px-2"
-      } py-6 transition-global`}
+      } py-6 transition-global rounded-r-2xl`}
     >
       <div
         className={`relative flex flex-col h-20 mb-14 ${

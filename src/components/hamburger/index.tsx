@@ -1,13 +1,13 @@
 import { useDispatch, useSelector } from "react-redux";
+import { handleNavbarMobile } from "../../redux/slices/navbar";
 import { AppDispatch, RootState } from "../../redux/store";
-import { hanldeNavbarMobile } from "../../redux/slices/navbar";
 
 const HamburgerMenu = () => {
   const { navbar } = useSelector((state: RootState) => state.navbar);
   const dispatch = useDispatch<AppDispatch>();
 
   const handleNavbar = () => {
-    dispatch(hanldeNavbarMobile());
+    dispatch(handleNavbarMobile());
   };
   return (
     <button

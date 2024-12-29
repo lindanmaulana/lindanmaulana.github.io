@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { hanldeNavbarMobile } from "../../redux/slices/navbar";
+import { handleCloseNavbarMobile } from "../../redux/slices/navbar";
 import { AppDispatch, RootState } from "../../redux/store";
 import { dataNavar } from "./types";
 
@@ -9,7 +9,7 @@ const NavbarList = () => {
   const dispatch = useDispatch<AppDispatch>()
   
   const handleHideNavbar = () => {
-    dispatch(hanldeNavbarMobile())
+    dispatch(handleCloseNavbarMobile())
   }
   return (
     <>
@@ -20,12 +20,12 @@ const NavbarList = () => {
           onClick={handleHideNavbar}
           className={({ isActive }) =>
             isActive
-              ? ` text-dev-black rounded-full dark:text-white dark:bg-white/10 bg-dev-black/10 ${
+              ? ` text-dev-black rounded-full dark:text-white dark:bg-white/10 bg-dev-black/10  ${
                   sidebar || navbar ? "justify-start ps-4" : "justify-center"
                 }  flex items-center gap-2 w-full py-2 rounded-s-sm text-sm`
               : `flex text-base text-dev-black-gray dark:text-white items-center gap-2 ${
-                  sidebar ? "justify-start ps-4" : "justify-center"
-                }    py-2 transition-global group`
+                  sidebar ? "justify-start ps-4" : "md:justify-center"
+                }    py-2 transition-global group w-full hover:dark:bg-white/10 hover:bg-dev-black/10`
           }
         >
           <nav.icon className="text-base" />
