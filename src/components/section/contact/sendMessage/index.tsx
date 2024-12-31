@@ -90,9 +90,10 @@ const ContactSendMessage = () => {
       {active && <AlertMessage message={message} type={type} />}
       <form onSubmit={handleSubmitForm}>
         <div className="grid w-full gap-3 mb-4 lg:grid-cols-2">
-          <label htmlFor="" className="flex flex-col ">
+          <label htmlFor="name" className="flex flex-col ">
             <input
               type="text"
+              id="name"
               {...register("name")}
               placeholder="Name"
               className="w-full h-full py-2 border rounded ps-3 "
@@ -103,9 +104,10 @@ const ContactSendMessage = () => {
               </span>
             )}
           </label>
-          <label htmlFor="" className="flex flex-col ">
+          <label htmlFor="email" className="flex flex-col ">
             <input
               type="email"
+              id="email"
               {...register("email")}
               placeholder="Email"
               className="w-full h-full py-2 border rounded ps-3 "
@@ -121,7 +123,7 @@ const ContactSendMessage = () => {
           <textarea
             {...register("message")}
             placeholder="Message"
-            id=""
+            id="message"
             className="w-full h-full p-3 border"
           ></textarea>
           {errors?.message && (

@@ -1,10 +1,9 @@
+import { useMemo } from "react";
+import { useSelector } from "react-redux";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/navbar";
-import { useSelector } from "react-redux";
-import { RootState } from "../redux/store";
 import NavMobile from "../components/navbar/navMobile";
-import { useMemo } from "react";
-import Footer from "../components/footer";
+import { RootState } from "../redux/store";
 
 const Pages = () => {
   const { darkMode } = useSelector((state: RootState) => state.theme);
@@ -17,7 +16,6 @@ const Pages = () => {
       <main>
         <Outlet />
       </main>
-      <Footer />
     </div>
   );
 };

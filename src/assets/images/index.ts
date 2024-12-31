@@ -33,3 +33,12 @@ import bgNav from "./backdrop.webp"
 export const BackgroundImage = {
   bgNav
 }
+
+import dicodingJs from "./certificate/dicoding-js.png"
+import dicodingReact from "./certificate/dicoding-react.png"
+import iitc from "./certificate/iitc.png"
+export const ImageCertificate = {
+  dicodingJs,
+  dicodingReact,
+  iitc
+}

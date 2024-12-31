@@ -1,19 +1,20 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+import 'react-loading-skeleton/dist/skeleton.css';
+import { QueryClient, QueryClientProvider } from "react-query";
 import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import PageAboutMe from "./pages/about/index.tsx";
+import PageContact from "./pages/contact/index.tsx";
+import PageDetailCertificate from "./pages/dashboard/DetailCertificate.tsx";
+import PageDashboard from "./pages/dashboard/index.tsx";
+import PageChatRoom from "./pages/discussion/index.tsx";
 import PageHome from "./pages/home/index.tsx";
 import Pages from "./pages/index.tsx";
+import PageDetailPortfolio from "./pages/portfolio/DetailPortfolio.tsx";
 import PagePortfolio from "./pages/portfolio/index.tsx";
 import store from "./redux/store.ts";
-import PageDetailPortfolio from "./pages/portfolio/DetailPortfolio.tsx";
-import PageContact from "./pages/contact/index.tsx";
-import { QueryClient, QueryClientProvider } from "react-query";
-import PageChatRoom from "./pages/discussion/index.tsx";
-import 'react-loading-skeleton/dist/skeleton.css'
-import PageDashboard from "./pages/dashboard/index.tsx";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "dashboard",
         element: <PageDashboard />
+      },
+      {
+        path: "dashboard/:id",
+        element: <PageDetailCertificate />
       }
     ],
   },

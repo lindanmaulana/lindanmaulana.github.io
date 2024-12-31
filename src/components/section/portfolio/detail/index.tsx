@@ -8,13 +8,18 @@ const PortfolioDetail = (props: { data: project }) => {
   const { data } = props;
   return (
     <LayoutSections styleContainer="py-14">
-      <Link
-        to="/portfolio"
-        className="absolute left-0 flex items-center gap-2 px-4 text-base top-12 text-dev-black-gray"
-      >
-        <IoArrowBackCircleOutline size={20} />
-        Back
-      </Link>
+      <div>
+        <Link
+          to="/portfolio"
+          className="flex items-center gap-2 px-3 py-1 text-sm text-white rounded bg-color-github max-w-24 group"
+        >
+          <IoArrowBackCircleOutline
+            className="group-hover:-translate-x-2 transition-global"
+            size={20}
+          />
+          Back
+        </Link>
+      </div>
       <div className="flex flex-col">
         <div className="flex flex-col gap-2 py-4 border-b border-dashed border-dev-black-gray">
           <h2 className="text-2xl font-semibold text-dev-black">
