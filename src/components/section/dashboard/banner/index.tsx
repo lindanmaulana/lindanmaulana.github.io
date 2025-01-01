@@ -3,17 +3,19 @@ import Title from "../../../title/Title";
 
 const DashboardBanner = () => {
   return (
-    <section className="pt-4 pb-5 lg:pt-16">
+    <section className="pt-4 pb-5 lg:pt-16 dark:bg-black">
       <div className="container max-w-3xl px-4 lg:px-0">
-        <Typewriter
-          words={["Nice to meet you!", "Welcome to My Contact"]}
-          loop={true}
-          cursor
-          cursorStyle="_"
-          typeSpeed={100}
-          deleteSpeed={60}
-          delaySpeed={1000}
-        />
+        <div className="dark:text-white">
+          <Typewriter
+            words={["Nice to meet you!", "Welcome to My Contact"]}
+            loop={true}
+            cursor
+            cursorStyle="_"
+            typeSpeed={100}
+            deleteSpeed={60}
+            delaySpeed={1000}
+          />
+        </div>
         <div>
           <Title
             style="border-b border-dashed border-dev-black-gray pb-4"

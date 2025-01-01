@@ -24,7 +24,7 @@ const NavMobile = () => {
               />
             </figure>
             <div className="text-center">
-              <h2 className="flex items-center gap-1 text-base font-semibold text-dev-black ">
+              <h2 className="flex items-center gap-1 text-base font-semibold dark:text-white text-dev-black ">
                 Lindan Maulana
                 <MdVerified className="text-[#1DB954]" />
               </h2>{" "}
@@ -37,8 +37,8 @@ const NavMobile = () => {
         </div>
       </div>
       {navbar ? (
-        <div className="sticky z-10 h-screen bg-white top-20">
-          <div className="flex flex-col items-start gap-2 px-4">
+        <div className="fixed z-10 w-full h-screen bg-white top-20">
+          <div className="flex flex-col items-start h-full gap-2 px-4 dark:bg-black">
             <NavbarList />
           </div>
         </div>

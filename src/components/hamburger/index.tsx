@@ -15,17 +15,17 @@ const HamburgerMenu = () => {
       className="flex flex-col gap-[6px] md:hidden"
     >
       <span
-        className={`block bg-black w-6 h-[2px] transition-global ${
+        className={`block bg-black dark:bg-white w-6 h-[2px] transition-global ${
           navbar ? "-rotate-45 origin-top-right" : ""
         }`}
       ></span>
       <span
-        className={`block bg-black w-6 h-[2px] transition-global ${
+        className={`block bg-black dark:bg-white w-6 h-[2px] transition-global ${
           navbar ? "opacity-0" : ""
         }`}
       ></span>
       <span
-        className={`block bg-black w-6 h-[2px] transition-global ${
+        className={`block bg-black dark:bg-white w-6 h-[2px] transition-global ${
           navbar ? "rotate-45 origin-bottom-right" : ""
         }`}
       ></span>

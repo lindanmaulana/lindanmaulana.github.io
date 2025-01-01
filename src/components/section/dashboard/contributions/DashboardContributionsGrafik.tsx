@@ -2,7 +2,7 @@ import GitHubCalendar from "react-github-calendar";
 
 const DashboardContributionsGrafik = () => {
   return (
-    <div >
+    <div className="dark:text-white">
       <GitHubCalendar
         colorScheme="light"
         username="lindanmaulana"

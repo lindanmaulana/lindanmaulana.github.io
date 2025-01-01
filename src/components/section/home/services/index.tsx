@@ -4,7 +4,7 @@ import HomeServiceListItems from "./ServiceListItems";
 const HomeServices = () => {
   return (
     <LayoutSections
-      styleSection="py-5 dark:bg-dev-black"
+      styleSection="py-5 dark:bg-black"
       styleContainer="overflow-hidden"
       icons={<FaServicestack />}
       title="Services"
