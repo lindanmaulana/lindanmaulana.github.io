@@ -38,7 +38,7 @@ const ChatRoomChat = () => {
   };
 
   return (
-    <section>
+    <section className="h-full dark:bg-black">
       <div className="container relative max-w-3xl px-4 lg:px-0">
         <div className="flex items-center justify-end mb-4">
           <button onClick={handleAddChat} className="">
@@ -85,7 +85,7 @@ const ChatRoomChat = () => {
             ? data.data.map((dt: dataChat) => {
                 const tgl = formatTimeStamps(dt.createdAt);
                 return (
-                  <div key={dt.id} className="flex items-start gap-3">
+                  <div key={dt.id} className="flex items-start h-full gap-3">
                     <div className="w-8 h-8 overflow-hidden rounded-full shrink-0 ">
                       <span className="flex items-center justify-center w-full h-full text-center text-white uppercase rounded-full bg-dev-black-gray">
                         {dt.name.substring(0, 1)}
@@ -94,12 +94,12 @@ const ChatRoomChat = () => {
                     <div>
                       <h2 className="flex items-center gap-1 mb-1">
                         {" "}
-                        <span className="text-sm">{dt.name}</span>
-                        <span className=" top-0 left-0 text-[10px] text-dev-black/40 font-semibold">
+                        <span className="text-sm dark:text-white">{dt.name}</span>
+                        <span className=" top-0 left-0 text-[10px] text-dev-black/40 font-semibold dark:text-white/40">
                           {tgl}
                         </span>
                       </h2>
-                      <p className="p-2 text-sm leading-normal rounded text-dev-black/70 bg-dev-black/5">
+                      <p className="p-2 text-sm leading-normal rounded dark:text-white/40 text-dev-black/70 bg-dev-black/5">
                         {dt.chat}
                       </p>
                     </div>

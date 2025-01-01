@@ -49,7 +49,7 @@ const ProjectListItems = () => {
               />
             </figure>
             <div className="flex flex-col gap-3 p-5 h-[40%] ">
-              <h3 className="text-lg text-dev-black-gray">{project.title}</h3>
+              <h3 className="text-lg text-dev-black-gray dark:text-white">{project.title}</h3>
               <p className="text-sm line-clamp-2 text-dev-black-gray">
                 {project.description}...
               </p>

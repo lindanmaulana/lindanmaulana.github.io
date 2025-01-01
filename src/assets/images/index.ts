@@ -5,8 +5,10 @@ import meTtd from "./me-ttd.png";
 import github from "./github.png"
 
 import lindanmaulana from "./lindanmaulana.jpg"
+import creator from "./creator.png"
 export const ImageIndex = {
-  lindanmaulana
+  lindanmaulana,
+  creator
 }
 
 export const ImageHome = {

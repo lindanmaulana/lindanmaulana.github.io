@@ -124,7 +124,7 @@ const ContactSendMessage = () => {
             {...register("message")}
             placeholder="Message"
             id="message"
-            className="w-full h-full p-3 border"
+            className="w-full h-full p-3 border rounded"
           ></textarea>
           {errors?.message && (
             <span className="text-xs text-pink-600">
@@ -137,9 +137,9 @@ const ContactSendMessage = () => {
           disabled={loading}
           className={`${
             loading
-              ? "bg-dev-black-gray/40 flex items-center justify-center cursor-progress"
-              : "bg-dev-black-gray"
-          } w-full p-2 text-sm text-center text-white rounded-lg `}
+              ? "bg-dev-black-gray/40 dark:bg-blue-200 flex items-center justify-center cursor-progress"
+              : "bg-dev-black-gray dark:bg-blue-500"
+          } w-full p-2 text-sm text-center text-white rounded-lg  `}
         >
           {loading ? (
             <span className="animate-spin">

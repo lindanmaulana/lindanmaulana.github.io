@@ -24,14 +24,16 @@ type chatRoomSchema = z.infer<typeof Schema>;
 const ChatRoomChatAddChat = () => {
   const queryClient = useQueryClient();
   const dispatch = useDispatch<AppDispatch>();
-  const { active, message, type } = useSelector((state: RootState) => state.alertMessage);
+  const { active, message, type } = useSelector(
+    (state: RootState) => state.alertMessage
+  );
   const [loading, setLoading] = useState<boolean>(false);
 
   const {
     handleSubmit,
     register,
     formState: { errors },
-    reset
+    reset,
   } = useForm<chatRoomSchema>({
     resolver: zodResolver(Schema),
   });
@@ -45,7 +47,7 @@ const ChatRoomChatAddChat = () => {
     setLoading(true);
     mutate(data, {
       onSuccess: () => {
-        reset()
+        reset();
         setLoading(false);
         dispatch(
           handleSetAlertMessage({
@@ -72,9 +74,7 @@ const ChatRoomChatAddChat = () => {
   });
   return (
     <>
-      {active ? (
-        <AlertMessage message={message} type={type} />
-      ) : null}
+      {active ? <AlertMessage message={message} type={type} /> : null}
       <form onSubmit={handleForm} className="p-4 rounded shadow-md w-[400px]">
         <h2 className="mb-2 text-sm">Send Message</h2>
         <div className="flex flex-col items-start gap-1">
@@ -85,7 +85,11 @@ const ChatRoomChatAddChat = () => {
               placeholder="Name"
               className="w-full py-1 border ps-2"
             />
-            {errors.name && <span className="text-xs text-red-500">{errors.name.message}</span>}
+            {errors.name && (
+              <span className="text-xs text-red-500">
+                {errors.name.message}
+              </span>
+            )}
           </label>
 
           <label htmlFor="" className="w-full">
@@ -94,7 +98,11 @@ const ChatRoomChatAddChat = () => {
               placeholder="type message here"
               className="w-full py-1 border ps-2"
             />
-            {errors.chat && <span className="text-xs text-red-500">{errors.chat.message}</span>}
+            {errors.chat && (
+              <span className="text-xs text-red-500">
+                {errors.chat.message}
+              </span>
+            )}
           </label>
           <button
             disabled={loading}

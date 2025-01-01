@@ -1,11 +1,12 @@
 import { Typewriter } from "react-simple-typewriter";
 import Title from "../../../title/Title";
+import { BiChat } from "react-icons/bi";
 
 const ChatRoomBanner = () => {
   return (
-    <section className="pt-4 pb-2 lg:pt-10">
+    <section className="pt-4 pb-2 lg:pt-10 dark:bg-black">
       <div className="container max-w-3xl px-4 lg:px-0">
-        <div className="flex flex-col gap-6 pb-3 border-b border-dashed border-dev-black">
+        <div className="flex flex-col gap-6 pb-3 border-b border-dashed border-dev-black dark:border-white/40">
           <div>
             <Typewriter
               words={["Nice to meet you!", "Welcome to My Discussion!"]}
@@ -17,7 +18,7 @@ const ChatRoomBanner = () => {
               delaySpeed={1000}
             />
           </div>
-          <Title title="Chat Room" subtitle="Leave your impression or sugestion about this website here" />
+          <Title icons={<BiChat />} title="Chat Room" subtitle="Leave your impression or sugestion about this website here" />
         </div>
       </div>
     </section>

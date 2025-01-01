@@ -26,7 +26,7 @@ const ContactFindme = () => {
                 >
                   {findme.title}
                 </h3>
-                <p className="text-xs">{findme.subtitle}</p>
+                <p className="text-xs dark:text-white/40">{findme.subtitle}</p>
                 <a href={findme.url}
                   className={`max-w-40 rounded py-1 text-center text-white`}
                   style={{ backgroundColor: findme.color }}

@@ -22,14 +22,14 @@ const PortfolioDetail = (props: { data: project }) => {
       </div>
       <div className="flex flex-col">
         <div className="flex flex-col gap-2 py-4 border-b border-dashed border-dev-black-gray">
-          <h2 className="text-2xl font-semibold text-dev-black">
+          <h2 className="text-2xl font-semibold text-dev-black dark:text-white">
             {data.title}
           </h2>
-          <p>{data.description}</p>
+          <p className="dark:text-white/40">{data.description}</p>
         </div>
         <div className="flex items-center justify-between py-4">
           <div className="flex items-center gap-1">
-            <h3 className="text-base text-dev-black-gray">Tech Stack: </h3>
+            <h3 className="text-base text-dev-black-gray dark:text-white">Tech Stack: </h3>
             <ul className="flex items-center gap-2">
               {data?.tech.map((payload) => (
                 <li key={payload.name} className="text-2xl">
@@ -38,10 +38,10 @@ const PortfolioDetail = (props: { data: project }) => {
               ))}
             </ul>
           </div>
-          <div className="">
+          <div>
             <a
               href={data.url}
-              className="flex items-center gap-1 text-base font-medium text-dev-black-gray"
+              className="flex items-center gap-1 text-base font-medium dark:text-white text-dev-black-gray"
             >
               <PiMonitorPlay size={22} />
               Live Demo

@@ -23,14 +23,14 @@ const ProjectFilter = () => {
 
   return (
     <div className="flex items-center justify-end gap-1">
-      <div className="flex items-center gap-1 overflow-x-auto no-scrollbar">
+      <div className="flex items-center gap-1 overflow-x-auto text-sm no-scrollbar">
         <button
           onClick={() => handleTech(1, "html")}
           className={`${
             selector.buttonTech === 1
               ? "bg-dev-blue text-white"
               : "bg-transparent"
-          } px-2 border rounded border-dev-black-gray/50`}
+          } px-2 border rounded border-dev-black-gray/50 dark:border-white dark:text-white`}
         >
           Html
         </button>
@@ -40,7 +40,7 @@ const ProjectFilter = () => {
             selector.buttonTech === 2
               ? "bg-dev-blue text-white"
               : "bg-transparent"
-          } px-2 border rounded border-dev-black-gray/50`}
+          } px-2 border rounded border-dev-black-gray/50 dark:border-white dark:text-white`}
         >
           Reactjs
         </button>
@@ -50,7 +50,7 @@ const ProjectFilter = () => {
             selector.buttonTech === 3
               ? "bg-dev-blue text-white"
               : "bg-transparent"
-          } px-2 border rounded border-dev-black-gray/50`}
+          } px-2 border rounded border-dev-black-gray/50 dark:border-white dark:text-white`}
         >
           Tailwindcss
         </button>
@@ -60,7 +60,7 @@ const ProjectFilter = () => {
             selector.buttonTech === 4
               ? "bg-dev-blue text-white"
               : "bg-transparent"
-          } px-2 border rounded border-dev-black-gray/50`}
+          } px-2 border rounded border-dev-black-gray/50 dark:border-white dark:text-white`}
         >
           Expressjs
         </button>
