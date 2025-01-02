@@ -9,7 +9,7 @@ interface detailCertificateProps {
 const DetailCertificate = (props: detailCertificateProps) => {
   const { data } = props;
   return (
-    <LayoutSections styleSection="md:py-5">
+    <LayoutSections styleSection="md:py-5 md:h-full h-screen">
       <div>
         <Link
           to="/dashboard"
@@ -20,9 +20,9 @@ const DetailCertificate = (props: detailCertificateProps) => {
         </Link>
       </div>
       <div className="flex flex-col gap-3">
-        <div className="flex flex-col gap-3 pb-4 border-b border-dashed border-dev-black-gray">
-          <h2 className="text-3xl font-medium">{data.title}</h2>
-          <p>{data.desc}</p>
+        <div className="flex flex-col gap-3 pb-4 border-b border-dashed border-dev-black-gray dark:border-white/50">
+          <h2 className="text-3xl font-medium dark:text-white">{data.title}</h2>
+          <p className="dark:text-white/50">{data.desc}</p>
         </div>
         <div>
           <figure className="">
