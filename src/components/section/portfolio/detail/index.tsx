@@ -7,8 +7,8 @@ import { PiMonitorPlay } from "react-icons/pi";
 const PortfolioDetail = (props: { data: project }) => {
   const { data } = props;
   return (
-    <LayoutSections styleContainer="py-14">
-      <div>
+    <LayoutSections styleContainer="md:py-14 py-5 md:h-full h-screen dark:bg-black">
+      <div >
         <Link
           to="/portfolio"
           className="flex items-center gap-2 px-3 py-1 text-sm text-white rounded bg-color-github max-w-24 group"
