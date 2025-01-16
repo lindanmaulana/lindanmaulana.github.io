@@ -35,7 +35,7 @@ export const dataFindme: findme[] = [
         id: 3,
         title: "Let's connect",
         subtitle: "Explore my portfolio and behind-the-scenes moments on Instagram.",
-        url: "https://www.instagram.com/qqqqmln",
+        url: "https://www.instagram.com/lindanmaulana01",
         icon: RiInstagramFill,
         color: "#E1306C",
         titleButton: "Go to Instagram"
