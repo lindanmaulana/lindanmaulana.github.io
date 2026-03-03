@@ -60,6 +60,14 @@ const router = createBrowserRouter([
     path: "/personal-links",
     element: <PagePersonalLinks />,
   },
+  {
+    path: "*",
+    element: (
+      <div className="flex items-center text-gray-800">
+        Halaman Tidak Ditemukan (404)
+      </div>
+    ),
+  },
 ]);
 
 const queryClient = new QueryClient({
