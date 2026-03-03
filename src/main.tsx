@@ -57,7 +57,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "personal-links",
+    path: "/personal-links",
     element: <PagePersonalLinks />,
   },
 ]);
