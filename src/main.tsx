@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import 'react-loading-skeleton/dist/skeleton.css';
+import "react-loading-skeleton/dist/skeleton.css";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -12,6 +12,7 @@ import PageDashboard from "./pages/dashboard/index.tsx";
 import PageChatRoom from "./pages/discussion/index.tsx";
 import PageHome from "./pages/home/index.tsx";
 import Pages from "./pages/index.tsx";
+import { PagePersonalLinks } from "./pages/personal-links/index.tsx";
 import PageDetailPortfolio from "./pages/portfolio/DetailPortfolio.tsx";
 import PagePortfolio from "./pages/portfolio/index.tsx";
 import store from "./redux/store.ts";
@@ -43,17 +44,21 @@ const router = createBrowserRouter([
       },
       {
         path: "discussion",
-        element: <PageChatRoom />
+        element: <PageChatRoom />,
       },
       {
         path: "dashboard",
-        element: <PageDashboard />
+        element: <PageDashboard />,
       },
       {
         path: "dashboard/:id",
-        element: <PageDetailCertificate />
-      }
+        element: <PageDetailCertificate />,
+      },
     ],
+  },
+  {
+    path: "personal-links",
+    element: <PagePersonalLinks />,
   },
 ]);
 
@@ -72,5 +77,5 @@ createRoot(document.getElementById("root")!).render(
         <RouterProvider router={router} />
       </QueryClientProvider>
     </Provider>
-  </StrictMode>
+  </StrictMode>,
 );
