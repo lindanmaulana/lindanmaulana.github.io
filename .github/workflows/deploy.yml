@@ -3,7 +3,7 @@ on:
   push:
     branches: ['master']
 
-permission:
+permissions:
   contents: read
   pages: write
   id-token: write
