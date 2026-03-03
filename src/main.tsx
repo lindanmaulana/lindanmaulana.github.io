@@ -19,6 +19,10 @@ import store from "./redux/store.ts";
 
 const router = createBrowserRouter([
   {
+    path: "/personal-links",
+    element: <PagePersonalLinks />,
+  },
+  {
     path: "/",
     element: <Pages />,
     children: [
@@ -55,10 +59,6 @@ const router = createBrowserRouter([
         element: <PageDetailCertificate />,
       },
     ],
-  },
-  {
-    path: "/personal-links",
-    element: <PagePersonalLinks />,
   },
   {
     path: "*",
