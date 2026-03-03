@@ -2,6 +2,7 @@ import { IconType } from "react-icons";
 import { BsInstagram, BsLinkedin } from "react-icons/bs";
 import { DiGithubBadge } from "react-icons/di";
 import { FaGlobe } from "react-icons/fa6";
+import { GiProgression } from "react-icons/gi";
 
 interface linkData {
   id: number;
@@ -35,5 +36,11 @@ export const linkData: linkData[] = [
     title: "Portfolio Site",
     icon: FaGlobe,
     url: "https://lindanmaulana.github.io",
+  },
+  {
+    id: 5,
+    title: "Learning",
+    icon: GiProgression,
+    url: "https://lynk.id/lindanmaulana",
   },
 ];
